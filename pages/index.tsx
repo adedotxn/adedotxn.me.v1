@@ -12,59 +12,64 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <header className={styles.mobile_header} >
+        <h1>Phyf3</h1>
+
+        <Image 
+          src="/images/menu-fill.svg" 
+          alt = "menu bar" 
+          width ={15} height={15} 
+          className={styles.menu}
+        />
+      </header>
+      <header className={styles.desktop_header} >
+        <h1>Phyf3</h1>
+
+        <ul>
+          <li> <a href=""><span>01.</span> About</a> </li>
+          <li> <a href=""><span>02.</span> Projects</a> </li>
+          <li> <a href=""><span>03.</span> Contact</a> </li>
+          <li> <a href="">Resume</a> </li>
+        </ul>
+      </header>
+
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        <section className={styles.introduction} >
+            <h1>
+              <span>Hey, my name is </span>
+              <br/>Philip Adewole
+            </h1>
+            <h2>
+              _ Frontend Developer<br/> 
+              _ Blockchain Developer<br/>
+              _ Engineering Student
+             </h2>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.tsx</code>
-        </p>
+             <p>I build and am interested in building cool tools and solutions using technology. Avid learner and always trying to better my skills. I love music, basketball, gadgets and sometimes books</p>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+             <button>Check out my Resume</button>
+        </section>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+        <section className={styles.about}>
+          <h1><span>01.</span> <span> About me</span> </h1>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+          <p>I enjoy listening to music a little too much lmao. Currently studying computer engineering at Obafemi Awolowo University. I enjoy building client-side apps and websites, currently exploring some light backend to maybe transition to full mernstack. I also build apps that leverage on the blockchain and web3 technologies with Solidity, Ipfs, ethers js and co. </p>
 
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+          <div>
+            <h3>Here are some technologies I'm familiar with</h3>
+            <ul>
+              <li>Html & CSS</li>
+              <li>Javascript</li>
+              <li>ReactJS</li>
+              <li>Solidity</li>
+              <li>Typescript(beginner)</li>
+              <li>Next JS</li>
+            </ul>
+          </div>
+          
+        </section>
+
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
     </div>
   )
 }
