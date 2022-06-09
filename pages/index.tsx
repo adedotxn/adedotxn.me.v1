@@ -56,6 +56,7 @@ const Home: NextPage = () => {
           <p>I enjoy listening to music a little too much lmao. Currently studying computer engineering at Obafemi Awolowo University. I enjoy building client-side apps and websites, currently exploring some light backend to maybe transition to full mernstack. I also build apps that leverage on the blockchain and web3 technologies with Solidity, Ipfs, ethers js and co. </p>
 
           <div>
+            {/* eslint-disable-next-line react/no-unescaped-entities*/}
             <h3>Here are some technologies I'm familiar with</h3>
             <ul>
               <li>Html & CSS</li>
