@@ -1,5 +1,6 @@
 .container {
   padding: 0 2rem;
+  position: relative;
 }
 
 .mobile_header {
@@ -49,10 +50,13 @@
 
 .about {
   margin-top:15rem;
+  margin-bottom: 10rem;
 }
-.about h1 span:nth-child(1){
+.about h1 span:nth-child(1),
+.projects h1 span:nth-child(1){
   font-family: 'Fira Code';
-  color:var(--darkbrown);
+  color:var(--red);
+  font-size: 1.1rem;
 }
 .about h1 span:nth-child(2) {
   font-family: 'League Spartan', sans-serif;;
@@ -61,9 +65,23 @@
   letter-spacing: .25rem;
   font-size: 1.2rem;
 }
-.about p {
+.projects h1 span:nth-child(2) {
+  font-family: 'League Spartan', sans-serif;;
+  font-weight: 500;
+  text-transform: uppercase;
+  
+
+
+}
+.about p{
   font-size: 1.2rem;
   line-height: 1.4rem;
+}
+.available {
+  background-color: #c1c1c1ab;
+  padding:.2rem .7rem;
+  color:black;
+  border-radius: .3rem;
 }
 .about div {
   margin-top: 2rem;;
@@ -79,8 +97,67 @@
   grid-template-columns: 1fr 1fr;
 }
 .about div ul li {
-  line-height: 1.5rem;
+  line-height: 1.9rem;
   font-size: 1.05rem;
+}
+.projects {
+  margin-bottom: 5rem;
+}
+.cards {
+  display: grid;
+  row-gap: 2rem;;
+}
+.card {
+  background-color: var(--lightbg);
+  padding: .7rem 1rem;
+  border-radius: .5rem;
+}
+.card span {
+  color :var(--red);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.card h2 {
+  font-size: 1.9rem;
+}
+.card p {
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+}
+.card>div {
+  position: relative;
+  width:6rem;
+  display: flex;
+}
+.share {
+  width:100%;
+  height: 40px;
+  position: relative
+}
+
+.more {
+  margin-top:1rem;
+  border-top: 1px solid var(--lightbg);
+  border-bottom: 1px solid var(--lightbg);
+  padding-bottom: 2rem;;
+
+}
+.more h2 {
+  font-size: 1.5rem;
+}
+.more span a {
+  font-size: 1.3rem;
+}
+.more__links span {
+  border-bottom: 1px solid var(--red);
+  width:fit-content;
+}
+.more__links {
+  display: grid;
+}
+
+.main_desktop, .left, .right {
+  display: none;
 }
 
 
@@ -110,4 +187,29 @@
     font-family: 'Fira Code';
     color:var(--darkbrown)
   }
+  .main{
+    display: flex;
+  }
+  .left p, .right p {
+    transform: rotate(-90deg);
+  }
+  .left, .right {
+    margin-top: 20vh;
+    width:10vw;
+  }
+  .left {
+    display: block;
+    position: fixed;
+    left:0;
+  }
+  .right {
+    display: block;
+    position: fixed;
+    right: 0rem;
+  }
+  .content {
+    width:70vw;
+    margin: 0 auto;
+  }
+
 }

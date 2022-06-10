@@ -4,7 +4,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'League Spartan', sans-serif;
-  background-color: var(--black);
+  background-color: var(--bg);
   color:var(--white);
   font-size: 16px;;
 }
@@ -19,8 +19,10 @@ a {
 }
 
 :root {
-  --black : #171717;
+  --bg : #171717;
   --grey : #EDEDED;
   --darkbrown : #444444;
   --white : #ffff;
+  --red : rgb(218, 0, 55);
+  --lightbg:#55555551;
 }
