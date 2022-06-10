@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Projects.module.css'
 
-const Projects: NextPage = () => {
+const Archive: NextPage = () => {
     return (
         <div className={styles.projects}>
              <Head>
@@ -15,4 +15,4 @@ const Projects: NextPage = () => {
      ) 
 }
 
-export default Projects
+export default Archive

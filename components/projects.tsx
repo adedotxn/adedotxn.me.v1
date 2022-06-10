@@ -5,7 +5,7 @@ import styles from '../styles/Home.module.css'
 
 const Projects = () => {
     return (
-        <section className={styles.projects}>
+        <section id="projects" className={styles.projects}>
           <h1><span>02.</span> <span> Some things I`ve built</span> </h1>
 
           <div className={styles.cards}>
@@ -44,7 +44,7 @@ const Projects = () => {
             <h2>If you`d like to see more </h2>
 
             <div className={styles.more__links}>           
-              <span><Link href='/projects'> View Project Archive.</Link> </span>
+              <span><Link href='/archive'> View Project Archive.</Link> </span>
               {/* <span><Link href='/'>Explore Github Repositories.</Link></span> */}
             </div>
           </div>

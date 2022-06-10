@@ -9,14 +9,11 @@ const Intro = () => {
               <span>Hey, my name is </span>
               <br/>Philip Adewole
             </h1>
-            <h2>
-              _ Frontend Developer<br/> 
-              _ Blockchain Developer<br/>
-              _ Engineering Student
-             </h2>
-
-             <p>I build and am interested in building cool tools and solutions using technology. Avid learner and always trying to better my skills. I love music, basketball, gadgets and sometimes books</p>
-             <p className={styles.available}>Currently open to oppourtunities</p>
+           
+            <p  className={styles.intro}>I`m a frontend developer interested in building solutions and tools using web technology.
+              I`m also always open to learning and working with new technology.
+            </p>
+            <p className={styles.available}>Currently open to oppourtunities</p>
 
              <button>Check out my Resume</button>
         </section>
