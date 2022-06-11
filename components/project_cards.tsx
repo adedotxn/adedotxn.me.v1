@@ -39,7 +39,7 @@ const ProjectDiv = ({project}) => {
             className={styles.card}
             animate = {controls}
             initial = "hidden"
-            transition={{duration : 1}}
+            transition={{duration : .7}}
             variants={{
                 visible :{opacity :1, x:0},
                 hidden : {opacity : 0, x:-200}

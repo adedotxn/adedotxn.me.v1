@@ -14,8 +14,13 @@ const Intro = () => {
               I`m also always open to learning and working with new technology.
             </p>
             <p className={styles.available}>Currently open to oppourtunities</p>
-
-             <button>Check out my Resume</button>
+            
+            {/*Button styling credit : Codrops --> https://tympanus.net/Development/ButtonHoverStyles/ */}
+            <div className={styles.content__item}>
+              <button className={ [styles.button, styles.button__bestia].join(' ')}>
+					      <div className={styles.button__bg}></div><span>Check out my Resume</span>
+				      </button>
+            </div>
         </section>
      ) 
 }

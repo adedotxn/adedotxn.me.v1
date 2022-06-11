@@ -2,7 +2,7 @@
 export const Featured = [
     {
         category : "Blockgames Collaboration", 
-        name : "Metafile", 
+        name : "Metafiles", 
         details : "A dapp built to upload and share files in a publicly or privately on the platform. The dapp uses ipfs for file storage and addressing and the blockchain for keeping record of updates &/ uploads - as a way to make the data immutable.",
         id:1
     },
