@@ -1,8 +1,9 @@
 import Link from 'next/link'
+import { FC } from 'react';
 import styles from '../styles/Home.module.css'
 import ProjectCard from "./project_cards";
 
-const Projects = () => {
+const Projects:FC = () => {
     return (
         <section 
           id="projects" className={styles.projects}>

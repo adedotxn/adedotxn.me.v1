@@ -6,7 +6,7 @@
 .mobile_header {
   display: flex;
   justify-content: space-between;
-  padding:0rem 2rem;
+  padding:1rem 2rem;
 }
 .mobile_header h1 {
   font-weight: 500;
@@ -15,7 +15,9 @@
   display: none;
 }
 .introduction {
-  margin-top:5rem;
+  /* height: 80vh;; */
+  margin-top:3rem;
+  /* border: 1px solid white; */
 }
 .introduction>h1>span{
   font-size: 1.5rem;
@@ -24,8 +26,9 @@
 }
 .introduction>h1 {
   color:#c1c1c1ab;
-  font-size: 3rem;
+  font-size: 3.2rem;
   line-height: 3rem;;
+  line-height:3.6rem;;
 }
 .introduction h2 {
   color:#eeececac;
@@ -35,7 +38,7 @@
 }
 .introduction p{
   font-size: 1.4rem;
-  line-height: 1.5rem;
+  line-height: 1.7rem;
 }
 /* .introduction button {
   background: transparent;
@@ -51,6 +54,7 @@
 
 .content__item {
   float: right;
+  margin-top: 3rem;
 }
 
 .button {
@@ -188,20 +192,23 @@
   color:black;
   border-radius: .3rem;
 }
-.about div {
+.technologies {
   margin-top: 2rem;;
 }
-.about div h3 {
+.technologies div {
+  margin-top: 1rem;
+}
+.technologies div h3 {
   line-height: 1.2rem;
   font-size: 1.2rem;
 }
-.about div ul {
+.technologies div ul {
   padding:0;
   list-style-type: none;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-.about div ul li {
+.technologies div ul li {
   line-height: 1.9rem;
   font-size: 1.05rem;
 }
@@ -262,21 +269,27 @@
   display: grid;
 }
 .contact {
-  margin:3rem 0rem;
+  margin:3rem 0rem 5rem 0rem;
+}
+.contact div {
+  display: grid;
+  place-items: center;
 }
 .contact p {
-  margin: 0 auto;
+  font-size: 1.5rem;;
 }
 .contact ul {
+  /* margin-top:2rem; */
   list-style-type: none;
   display: flex;
-  justify-content: space-evenly;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   align-items: center;
-  justify-content: center;
-  width:70vw;
+  justify-content:space-between;
+  width:40vw;
 }
+
+
 
 
 .main_desktop, .left, .right {
@@ -410,8 +423,17 @@
     font-weight: 200;
     font-size: 1.1rem;
   }
-  .about div {
-    width:40vw;
+  
+  .technologies {
+    width:50vw;
+  }
+  .technologies div ul {
+    position: relative;
+    bottom:.5rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .technologies div ul li {
+    line-height: 1.9rem;
   }
   .projects {
     position: relative
@@ -435,6 +457,9 @@
   .more__links span:hover {
     border-bottom: 1px solid var(--red);
     transform:translateY(10%)
+  }
+  .contact {
+    display: none;
   }
 
 }

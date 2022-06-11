@@ -27,3 +27,12 @@ a {
   --red : rgb(218, 0, 55);
   --lightbg:#55555551;
 }
+
+footer {
+  display: grid;
+  place-items: center;
+}
+
+footer p span {
+  border-bottom: 1px solid var(--grey);
+}

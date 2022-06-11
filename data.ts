@@ -1,5 +1,11 @@
+interface IFeatured { 
+    category:string, 
+    name:string, 
+    details:string,
+    id: number
+} 
 
-export const Featured = [
+export const Featured: Array<IFeatured> = [
     {
         category : "Blockgames Collaboration", 
         name : "Metafiles", 

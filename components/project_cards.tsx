@@ -1,11 +1,19 @@
 import { motion, useAnimation } from "framer-motion"
 import Image from "next/image"
-import { useEffect } from "react"
+import { FC, useEffect } from "react"
 import { useInView } from "react-intersection-observer"
 import { Featured } from "../data"
 import styles from '../styles/Home.module.css'
 
-const ProjectCard = () => {
+interface IProject  {
+    id: number,
+    name: string,
+    category?:string,
+    details:string
+}
+
+
+const ProjectCard:FC = () => {
     return(
         <>
         <div className="container">
@@ -19,7 +27,7 @@ const ProjectCard = () => {
     )
 }
 
-const ProjectDiv = ({project}) => {
+const ProjectDiv:FC<{project : IProject}> = ({project}) => {
     const controls = useAnimation()
     const [ref, inView] = useInView({
         threshold:0.3
@@ -28,9 +36,7 @@ const ProjectDiv = ({project}) => {
     useEffect(() => {
         if(inView) {
             controls.start('visible')
-        }/* else {
-            controls.start('hidden')
-        }*/
+        }
     }, [controls, inView])
 
     return (

@@ -6,6 +6,7 @@ import styles from '../styles/Home.module.css'
 import Intro from '../components/introductions'
 import About from '../components/about'
 import Projects from '../components/projects'
+import ContactIcons from '../components/contact_icons'
 
 const Home: NextPage = () => {
   return (
@@ -19,31 +20,7 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <div className={styles.left} >
-          <ul>
-            <li> 
-              <Link href=""> 
-                <Image src='/images/github.svg' alt = "github" width={20} height={20}/>  
-              </Link> 
-            </li>
-
-            <li> 
-              <Link href=""> 
-                <Image src='/images/twitter.svg' alt = "github" width={20} height={20}/>  
-              </Link> 
-            </li>
-
-            <li> 
-              <Link href=""> 
-                <Image src='/images/linkedin.svg' alt = "github" width={20} height={20}/>  
-              </Link> 
-            </li>
-
-            <li> 
-              <Link href=""> 
-                <Image src='/images/mail.svg' alt = "github" width={20} height={20}/>  
-              </Link> 
-            </li>  
-          </ul>
+          <ContactIcons/>
 
           <div></div>
         </div>
@@ -54,37 +31,11 @@ const Home: NextPage = () => {
           <Projects/>
 
           <section className={styles.contact}> 
+            <div>
             <h1>03.</h1>
             <p>Feel free to reach out!</p>
-
-            <ul>
-              <li> 
-                <Link href=""> 
-                  <Image src='/images/github.svg' alt = "github" width={20} height={20}/>  
-                </Link> 
-              </li>
-
-              <li> 
-                <Link href=""> 
-                  <Image src='/images/twitter.svg' alt = "github" width={20} height={20}/>  
-                </Link> 
-              </li>
-
-              <li> 
-                <Link href=""> 
-                  <Image src='/images/linkedin.svg' alt = "github" width={20} height={20}/>  
-                </Link> 
-              </li>
-
-              <li> 
-                <Link href=""> 
-                  <Image src='/images/mail.svg' alt = "github" width={20} height={20}/>  
-                </Link> 
-              </li>
-              
-            </ul>
-
-            
+            <ContactIcons/>
+            </div>
           </section>
         </div>
         
@@ -93,6 +44,10 @@ const Home: NextPage = () => {
           <p> Phyf3script@gmail.com</p>
          </div>
       </main>
+      
+      <footer >
+        <p>Inspired by <span><Link href="https://brittanychiang.com">brittanychiang.com</Link></span>  </p>
+      </footer>
     </div>
   )
 }

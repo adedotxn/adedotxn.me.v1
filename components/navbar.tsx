@@ -8,12 +8,12 @@ const Navbar = () => {
         <header className={styles.mobile_header} >
           <h1>Phyf3</h1> 
 
-          <Image 
+          {/* <Image 
             src="/images/menu-fill.svg" 
             alt = "menu bar" 
             width ={20} height={20} 
             className={styles.menu}
-          />
+          /> */}
         </header>
         <header className={styles.desktop_header} >
           <h1>Phyf3 </h1>
@@ -21,7 +21,6 @@ const Navbar = () => {
           <ul>
             <li>  <Link href='#about'> About</Link> </li>
             <li> <Link href="#projects" > Projects</Link></li> 
-            <li> <a href="#contact"><span>03.</span> Contact</a> </li>
             <li> <a href="">Resume</a> </li>
           </ul>
         </header>
