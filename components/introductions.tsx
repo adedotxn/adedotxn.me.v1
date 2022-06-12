@@ -12,7 +12,7 @@ const Intro = () => {
             </h1>
            
             <p  className={styles.intro}>I`m a frontend developer interested in building solutions and tools using web technology.
-              I`m also always open to learning and working with new technology.
+              I`m also always open to learning and working with new technology. Currently exploring web3/the decentralised web and mernstack.
             </p>
             <p className={styles.available}>Currently open to oppourtunities</p>
             

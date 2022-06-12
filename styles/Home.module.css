@@ -157,7 +157,7 @@
 
 
 .about {
-  margin-top:15rem;
+  margin-top:20rem;
   margin-bottom: 10rem;
 }
 .about h1 span:nth-child(1),
@@ -425,12 +425,14 @@
   }
   
   .technologies {
+    padding: 0;
+    margin: 0;
     width:50vw;
   }
   .technologies div ul {
     position: relative;
     bottom:.5rem;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr auto;
   }
   .technologies div ul li {
     line-height: 1.9rem;

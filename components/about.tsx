@@ -31,9 +31,9 @@ const About:FC = () => {
           initial="hidden"
           animate={control}
           id = "about" className={styles.about}>
-          <h1><span>01.</span> <span> About me</span> </h1>
+          <h1><span>01.</span> <span> My Arsenal</span> </h1>
 
-          <p> I enjoy building client-side apps and websites,also currently exploring some light backend to maybe transition to full mernstack. I also build apps that leverage on the blockchain and web3 technologies with Solidity, Ipfs, ethers js and co. </p>
+          {/* <p> I enjoy building client-side apps and websites,also currently exploring some light backend to maybe transition to full mernstack. I also build apps that leverage on the blockchain and web3 technologies with Solidity, Ipfs, ethers js and co. </p> */}
 
           <div className={styles.technologies}>
             <div>
