@@ -5,8 +5,8 @@ interface IFeatured {
     name:string, 
     details:string,
     id: number
-    gitlink?:string,
-    livelink?:string
+    gitlink?:URL,
+    livelink?:URL
 } 
 
 export const Featured: Array<IFeatured> = [
@@ -15,24 +15,24 @@ export const Featured: Array<IFeatured> = [
         name : "Metafiles", 
         details : "A dapp built to upload and share files in a publicly or privately on the platform. The dapp uses ipfs for file storage and addressing and the blockchain for keeping record of updates &/ uploads - as a way to make the data immutable.",
         id:1,
-        gitlink : "https://github.com/Phyf3/Decentralized-Library",
-        livelink : "https://metafiles.netlify.app"
+        gitlink : new URL("https://github.com/Phyf3/Decentralized-Library"),
+        livelink : new URL("https://metafiles.netlify.app")
     },
     {
         category: "FrontendMentor Challenge", 
         name: "room.", 
         details: "A really simple homepage for an hypothetical furniture company",
         id:2,
-        gitlink : "https://github.com/Phyf3/room",
-        livelink : "http://room-iota.vercel.app/"
+        gitlink : new URL("https://github.com/Phyf3/room"),
+        livelink : new URL("http://room-iota.vercel.app/")
     },
     {
         category:"Personal Project", 
         name:"spread", 
         details:"A dapp i`m building for mass disbursing of tokens on testnets(for now). It currently only supports ERC20 tokens but i`m working on adding support for other token standards like ERC1155 and maybe ERC721. Working on making it compatible with other testnets too",
         id:3,
-        gitlink : "https://github.com/Phyf3/spread",
-        livelink : 'https://spread-sigma.vercel.app/'
+        gitlink : new URL("https://github.com/Phyf3/spread"),
+        livelink : new URL('https://spread-sigma.vercel.app/')
     }
 ]
 

@@ -1,15 +1,18 @@
 import { motion, useAnimation } from "framer-motion"
 import Image from "next/image"
+import Link from "next/link"
 import { FC, useEffect } from "react"
 import { useInView } from "react-intersection-observer"
 import { Featured } from "../data"
 import styles from '../styles/Home.module.css'
 
 interface IProject  {
-    id: number,
-    name: string,
-    category?:string,
-    details:string
+    category:string, 
+    name:string, 
+    details:string,
+    id: number
+    gitlink?:URL,
+    livelink?:URL
 }
 
 
@@ -55,8 +58,21 @@ const ProjectDiv:FC<{project : IProject}> = ({project}) => {
             <h2>{project.name}</h2>
             <p>{project.details}</p>
             <div>
-              <Image src='/images/github.svg' alt="github" width={20} height={20} />
-              <Image src='/images/share.svg' alt="github" layout="fill" className={styles.share} />
+            {project?.gitlink?.href &&
+                    <Link href={`${project?.gitlink?.href}`}> 
+                        <a target="blank">
+                            <Image src='/images/github.svg' alt="github" width={20} height={20} />
+                        </a>
+                    </Link>
+                }
+
+                {project?.livelink?.href &&
+                    <Link href={`${project?.livelink?.href}`}>
+                        <a target="blank">
+                            <Image src='/images/share.svg' alt="github" layout="fill" className={styles.share} />
+                        </a>
+                    </Link>
+                }
             </div>
     
 

@@ -304,14 +304,6 @@
   border-bottom: 1px solid var(--red);
   width:fit-content;
 }
-.tools{
-  color: green;
-}
-.tools ul {
-  display: flex;
-  list-style-type: none;
-}
-
 
 
 
