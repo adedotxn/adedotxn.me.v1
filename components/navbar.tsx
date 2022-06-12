@@ -19,8 +19,8 @@ const Navbar = () => {
           <h1>Phyf3 </h1>
 
           <ul>
-            <li>  <Link href='#about'> About</Link> </li>
-            <li> <Link href="#projects" > Projects</Link></li> 
+            <li>  <Link href='/#about'> About</Link> </li>
+            <li> <Link href="/#projects" > Projects</Link></li> 
             <li> <a href="">Resume</a> </li>
           </ul>
         </header>
