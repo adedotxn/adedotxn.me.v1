@@ -58,18 +58,21 @@ const ProjectDiv:FC<{project : IArchive}> = ({project}) => {
                 <h3>{project.name}</h3>
                 <p>{project.details}</p>
                 <div className={styles.icon}>
-                    
-                    <Link href={project?.gitlink?.href}> 
+                {project?.gitlink?.href &&
+                    <Link href={`${project?.gitlink?.href}`}> 
                         <a target="blank">
                             <Image src='/images/github.svg' alt="github" width={20} height={20} />
                         </a>
                     </Link>
-                  
-                    <Link href={project?.livelink?.href}>
+                }
+
+                {project?.livelink?.href &&
+                    <Link href={`${project?.livelink?.href}`}>
                         <a target="blank">
                             <Image src='/images/share.svg' alt="github" layout="fill" className={styles.share} />
                         </a>
                     </Link>
+                }
                 </div>
             </div>
         </motion.section> 

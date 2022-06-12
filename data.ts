@@ -1,3 +1,4 @@
+import { UrlWithStringQuery } from "url"
 
 interface IFeatured { 
     category:string, 
