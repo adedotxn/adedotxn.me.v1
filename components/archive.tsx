@@ -34,10 +34,26 @@ const ProjectDiv:FC<{project : IArchive}> = ({project}) => {
     const [ref, inView] = useInView({
         threshold:0.3
     })
+    const container = {
+        hidden: { opacity:0, x:-50},
+        show: {
+          opacity:1,
+          x : 0,
+          transition: {
+            duration: .7,
+            staggerChildren: 0.3,
+            delayChildren: 0.2
+          }
+        }
+      };
+      const items = {
+        hidden: {opacity:0, x: 50 },
+        show: {opacity:1, x: 0, transition: {duration:.5}}
+      };
 
     useEffect(() => {
         if(inView) {
-            controls.start('visible')
+            controls.start('show')
         }
     }, [controls, inView])
 
@@ -47,11 +63,7 @@ const ProjectDiv:FC<{project : IArchive}> = ({project}) => {
             className={styles.archive}
             animate = {controls}
             initial = "hidden"
-            transition={{duration : .7}}
-            variants={{
-                visible :{opacity :1, x:0},
-                hidden : {opacity : 0, x:-200}
-            }}
+            variants={container}
         >
             <div>
                 <span>{project.category}</span>

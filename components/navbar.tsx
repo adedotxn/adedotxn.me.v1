@@ -19,9 +19,11 @@ const Navbar = () => {
           <h1>Phyf3 </h1>
 
           <ul>
-            <li>  <Link href='/#about'> About</Link> </li>
-            <li> <Link href="/#projects" > Projects</Link></li> 
-            <li> <a href="">Resume</a> </li>
+            <li className={[styles.link, styles.link_anim].join(" ")}>  <Link href='/#about'> About</Link> </li>
+            <li className={[styles.link, styles.link_anim].join(" ")}> <Link href="/#projects" > Projects</Link></li> 
+            <li>
+              <button className={[styles.button, styles.button__mimas].join(' ')}><span>Resume</span></button>
+		        </li>
           </ul>
         </header>
       </>
