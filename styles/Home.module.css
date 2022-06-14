@@ -363,6 +363,13 @@
   .desktop_header ul li:last-child:hover{
     border:0px solid #c1c1c1ab;
   }
+  .button {
+    padding: .2rem 1rem;
+  }
+  .content__item {
+    float: right;
+    margin-top: 0rem;
+  }
   .button__mimas {
     letter-spacing: 0.05rem;
     overflow: hidden;
@@ -390,7 +397,7 @@
   }
   .desktop_header ul li a span {
     font-family: 'Fira Code';
-    color:var(--darkbrown)
+    color:white
   }
   .main{
     display: flex;
@@ -455,6 +462,8 @@
   .introduction h1 {
     font-size: 5.5rem;
   }
+
+  
   .break {
     display: none;
     word-spacing: 1rem;;

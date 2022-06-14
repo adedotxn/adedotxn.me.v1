@@ -22,7 +22,13 @@ const Navbar = () => {
             <li className={[styles.link, styles.link_anim].join(" ")}>  <Link href='/#about'> About</Link> </li>
             <li className={[styles.link, styles.link_anim].join(" ")}> <Link href="/#projects" > Projects</Link></li> 
             <li>
-              <button className={[styles.button, styles.button__mimas].join(' ')}><span>Resume</span></button>
+              <button className={[styles.button, styles.button__mimas].join(' ')}>
+                <Link href="https://drive.google.com/file/d/1SspjX3pFynhnzA1uL6TS9pNRYAyIwdCu/view?usp=sharing" passHref>
+                  <a target="blank">
+                    <span>Resume</span>
+                  </a>
+                </Link>
+              </button>
 		        </li>
           </ul>
         </header>

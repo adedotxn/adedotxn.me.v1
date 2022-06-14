@@ -64,6 +64,7 @@ export const ArchiveProjects : Array<IArchiveProjects> = [
         id : 3,
         gitlink : new URL("https://github.com/Phyf3/SpeedrunEth-Quests"),
     },
+
     {
         name : "rest-countries",
         details: "web app to get information about countries, data fetched from rest apis, built with react",
@@ -91,5 +92,12 @@ export const ArchiveProjects : Array<IArchiveProjects> = [
         id : 7,
         gitlink : new URL("https://github.com/Phyf3/IndieBrew-Landing-Page"),
         livelink : new URL("http://indie-brew-landing-page-gray.vercel.app/")
-    }
+    },
+    {
+        name : "todo app",
+        details: "learning project built to learn how to work with nodejs, express and mongodb ",
+        id : 8,
+        gitlink : new URL("https://github.com/Phyf3/todo-app-mernstack"),
+        livelink : new URL("https://mernstack-taskapp.netlify.app/")
+    },
 ]

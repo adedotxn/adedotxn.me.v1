@@ -34,14 +34,14 @@ const Intro = () => {
             </motion.h1>
            
             <motion.p variants={items}  className={styles.intro}>I`m a frontend developer interested in building solutions and tools using web technology.
-              I`m also always open to learning and working with new technology. Currently exploring web3/the decentralised web and mernstack.
+              I`m also always open to learning and working with new technology. Currently exploring web3/the decentralised web and mernstack web development.
             </motion.p>
             <motion.p variants={items} className={styles.available}>
               Currently open to oppourtunities
             </motion.p>
             
             {/*Button styling credit : Codrops --> https://tympanus.net/Development/ButtonHoverStyles/ */}
-            <Link  href="https://drive.google.com/file/d/1DQQQCT1ixQTH_YR_I_nbyZy5083T-5pQ/view?usp=sharing"  passHref>
+            <Link  href="https://drive.google.com/file/d/1SspjX3pFynhnzA1uL6TS9pNRYAyIwdCu/view?usp=sharing"  passHref>
               <a target="blank">
                 <div className={styles.content__item}>
                   <motion.button variants={items} className={ [styles.button, styles.button__bestia].join(' ')}>
