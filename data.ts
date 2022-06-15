@@ -59,7 +59,7 @@ export const ArchiveProjects : Array<IArchiveProjects> = [
     },
     {
         name : "voting dapp",
-        details : "codebase for a voting dapp i contributed to during a blockchain cohort,i mainly worked with solidity,
+        details : "codebase for a voting dapp i contributed to during a blockchain cohort,i mainly worked with solidity",
         id: 3,
         gitlink : new URL("https://github.com/maura-dev/Voting-Dapp.git"),
     },
