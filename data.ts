@@ -52,19 +52,17 @@ export const ArchiveProjects : Array<IArchiveProjects> = [
         gitlink : new URL("https://github.com/Phyf3/data-structures-and-algorithms"),
     },
     {
-        name : "weather-app",
-        details: "built with react and on a couple free weather apis",
-        id : 2,
-        gitlink : new URL("https://github.com/Phyf3/Weather-app"),
-        livelink : new URL("http://weather-app-phyf3.vercel.app/")
-    },
-    {
         name : "speedrunEth-quests",
         details: "repo containing my completed speedruneth quests",
-        id : 3,
+        id : 2,
         gitlink : new URL("https://github.com/Phyf3/SpeedrunEth-Quests"),
     },
-
+    {
+        name : "voting dapp",
+        details : "codebase for a voting dapp i contributed to during a blockchain cohort,i mainly worked with solidity,
+        id: 3,
+        gitlink : new URL("https://github.com/maura-dev/Voting-Dapp.git"),
+    },
     {
         name : "rest-countries",
         details: "web app to get information about countries, data fetched from rest apis, built with react",
@@ -87,17 +85,18 @@ export const ArchiveProjects : Array<IArchiveProjects> = [
         livelink : new URL("https://rock-paper-scissors-game-using-vanilla-js.vercel.app/")
     },
     {
-        name : "indiebrew-landing-page",
-        details: "",
-        id : 7,
-        gitlink : new URL("https://github.com/Phyf3/IndieBrew-Landing-Page"),
-        livelink : new URL("http://indie-brew-landing-page-gray.vercel.app/")
-    },
-    {
         name : "todo app",
         details: "learning project built to learn how to work with nodejs, express and mongodb ",
-        id : 8,
+        id : 7,
         gitlink : new URL("https://github.com/Phyf3/todo-app-mernstack"),
         livelink : new URL("https://mernstack-taskapp.netlify.app/")
     },
+    {
+        name : "indiebrew-landing-page",
+        details: "",
+        id : 8,
+        gitlink : new URL("https://github.com/Phyf3/IndieBrew-Landing-Page"),
+        livelink : new URL("http://indie-brew-landing-page-gray.vercel.app/")
+    }
+
 ]
