@@ -44,7 +44,7 @@ const About:FC = () => {
                 <li>Javascript (ES6+)</li>
                 <li>ReactJS</li>
                 <li>Solidity</li>
-                <li>Typescript(beginner)</li>
+                <li>Typescript</li>
                 <li>Next JS</li>
               </ul>
             </div>
