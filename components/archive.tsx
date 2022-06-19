@@ -1,10 +1,13 @@
-import { motion, useAnimation } from "framer-motion"
 import Image from "next/image"
-import { FC, useEffect } from "react"
-import { useInView } from "react-intersection-observer"
+import { FC } from "react"
 import styles from '../styles/Home.module.css'
 import { ArchiveProjects } from "../data"
 import Link from "next/link"
+import {LazyMotion, m } from "framer-motion"
+
+
+const loadFeatures = () => 
+  import ('./features.js').then(res => res.default)
 
 interface IArchive  {
     category?:string, 
@@ -30,10 +33,10 @@ const ArchiveCard:FC = () => {
 }
 
 const ProjectDiv:FC<{project : IArchive}> = ({project}) => {
-    const controls = useAnimation()
-    const [ref, inView] = useInView({
-        threshold:0.3
-    })
+    // const controls = useAnimation()
+    // const [ref, inView] = useInView({
+    //     threshold:0.3
+    // })
     const container = {
         hidden: { opacity:0, x:-50},
         show: {
@@ -46,22 +49,22 @@ const ProjectDiv:FC<{project : IArchive}> = ({project}) => {
           }
         }
       };
-      const items = {
-        hidden: {opacity:0, x: 50 },
-        show: {opacity:1, x: 0, transition: {duration:.5}}
-      };
+    //   const items = {
+    //     hidden: {opacity:0, x: 50 },
+    //     show: {opacity:1, x: 0, transition: {duration:.5}}
+    //   };
 
-    useEffect(() => {
-        if(inView) {
-            controls.start('show')
-        }
-    }, [controls, inView])
+    // useEffect(() => {
+    //     if(inView) {
+    //         controls.start('show')
+    //     }
+    // }, [controls, inView])
 
     return (
-        <motion.section
-            ref = {ref}
+        <LazyMotion features={loadFeatures}>
+        <m.section
             className={styles.archive}
-            animate = {controls}
+            animate = "show"
             initial = "hidden"
             variants={container}
         >
@@ -98,7 +101,8 @@ const ProjectDiv:FC<{project : IArchive}> = ({project}) => {
                 }
                 </div>
             </div>
-        </motion.section> 
+        </m.section> 
+        </LazyMotion>
     )
 }
 

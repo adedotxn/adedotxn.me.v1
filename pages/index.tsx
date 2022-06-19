@@ -2,10 +2,10 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
-import Intro from '../components/introductions'
 import About from '../components/about'
 import Projects from '../components/projects'
 import ContactIcons from '../components/contact_icons'
+import Intro from '../components/introductions';
 
 const Home: NextPage = () => {
   return (
