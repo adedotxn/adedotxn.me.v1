@@ -1,35 +1,10 @@
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import { FC, useEffect } from "react";
+import { FC} from "react";
 
 const About:FC = () => {
-  const fadeVariant = {
-    visible: { opacity: 1, y:0, transition : {duration: .9} },
-    hidden: { opacity: 0,  y: -100 },
-  }
-
-  const control = useAnimation()
-  const [ref, inView] = useInView({
-    threshold:0.4
-  })
-
-  useEffect(() => {
-    if (inView) {
-      control.start("visible");
-      console.log("In view")
-    }/* else {
-      control.start("hidden");
-      console.log("Out of View")
-    }*/
-  }, [control, inView]);
-
-
     return (
-        <motion.section ref={ref} variants={fadeVariant}
-          initial="hidden"
-          animate={control}
+        <section 
+          
           id = "about" className={styles.about}>
           <h1><span>01.</span> <span> My Arsenal</span> </h1>
 
@@ -59,7 +34,7 @@ const About:FC = () => {
               </ul>
             </div>
           </div>
-        </motion.section>
+        </section>
      ) 
 }
 

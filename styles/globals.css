@@ -8,6 +8,7 @@ body {
   color:var(--white);
   font-size: 16px;;
   scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
 }
 
 a {
@@ -24,7 +25,7 @@ a {
   --grey : #EDEDED;
   --darkbrown : #444444;
   --white : #ffff;
-  --red : rgb(218, 0, 55);
+  --red : #ff0947;
   --lightbg:#55555551;
 }
 

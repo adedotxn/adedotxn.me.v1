@@ -1,6 +1,5 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 import Intro from '../components/introductions'
@@ -20,7 +19,9 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <div className={styles.left} >
-          <ContactIcons/>
+          <div>
+            <ContactIcons/>
+          </div>
 
           <div></div>
         </div>
@@ -41,7 +42,13 @@ const Home: NextPage = () => {
         
 
         <div className={styles.right}>
-          <p> Phyf3script@gmail.com</p>
+          <div>
+          <Link href="mailto:phyf3script@gmail.com">
+            <a target = "blank">
+              Phyf3script@gmail.com
+            </a>
+          </Link>
+          </div>
          </div>
       </main>
       

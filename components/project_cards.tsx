@@ -1,8 +1,6 @@
-import { motion, useAnimation } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
-import { FC, useEffect } from "react"
-import { useInView } from "react-intersection-observer"
+import { FC } from "react"
 import { Featured } from "../data"
 import styles from '../styles/Home.module.css'
 
@@ -31,31 +29,21 @@ const ProjectCard:FC = () => {
 }
 
 const ProjectDiv:FC<{project : IProject}> = ({project}) => {
-    const controls = useAnimation()
-    const [ref, inView] = useInView({
-        threshold:0.3
-    })
-
-    useEffect(() => {
-        if(inView) {
-            controls.start('visible')
-        }
-    }, [controls, inView])
-
     return (
-        <motion.div
-            ref = {ref}
-            className={styles.card}
-            animate = {controls}
-            initial = "hidden"
-            transition={{duration : .7}}
-            variants={{
-                visible :{opacity :1, x:0},
-                hidden : {opacity : 0, x:-200}
-            }}
-        >
+        <div className={styles.card}>
             <span>{project.category}</span>
-            <h2>{project.name}</h2>
+            {project.livelink ? 
+                <h2> 
+                    <Link  href={`${project?.livelink?.href}`}> 
+                        <a target='blank'> {project.name}  </a> 
+                    </Link>  
+                </h2> : 
+                <h2> 
+                    <Link  href={`${project?.gitlink?.href}`}> 
+                        <a target='blank'> {project.name}  </a> 
+                    </Link>  
+                </h2>
+            }
             <p>{project.details}</p>
             <div>
             {project?.gitlink?.href &&
@@ -76,7 +64,7 @@ const ProjectDiv:FC<{project : IProject}> = ({project}) => {
             </div>
     
 
-        </motion.div> 
+        </div> 
     )
 }
 

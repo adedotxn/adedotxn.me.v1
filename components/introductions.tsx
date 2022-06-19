@@ -1,6 +1,4 @@
-import { motion, useAnimation } from "framer-motion"
-
-import Image from 'next/image'
+import { motion } from "framer-motion"
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 import ContactIcons from "./contact_icons"
@@ -12,14 +10,14 @@ const Intro = () => {
         opacity:1,
         transition: {
           duration: 1,
-          staggerChildren: 0.3,
-          delayChildren: 0.2
+          staggerChildren: 0.2,
+          delayChildren: 0.1
         }
       }
     };
     const items = {
-      hidden: {opacity:0, y: 50 },
-      show: {opacity:1, y: 0, transition: {duration:.5}}
+      hidden: {opacity:0, y: 90 },
+      show: {opacity:1, y: 0, transition: {duration:.4}}
     };
 
 
@@ -34,11 +32,11 @@ const Intro = () => {
               <br/>Philip Adewole
             </motion.h1>
            
-            <motion.p variants={items}  className={styles.intro}>I`m a software developer primarily focused on frontend development using web technology.
-            Always open to learning new things and currently exploring the decentralised web and mernstack web development.
+            <motion.p variants={items}  className={styles.intro}>I`m a <span>software developer</span> primarily focused on <span>frontend development</span> using web technology.
+            Always open to learning new things and currently exploring the decentralised web and MERN stack web development.
             </motion.p>
             <motion.p variants={items} className={styles.available}>
-              Currently open to oppourtunities
+            <span>👇🏾</span> Currently open to opportunities 
             </motion.p>
 
             <motion.div variants={items} className={styles.contact_intro}>

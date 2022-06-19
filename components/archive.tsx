@@ -18,7 +18,7 @@ interface IArchive  {
 const ArchiveCard:FC = () => {
     return(
         <>
-        <div className="container">
+        <div className={styles.archive_container}>
             {ArchiveProjects?.map((project) => {
                 return(
                     <ProjectDiv key={project.id} project = {project}/>
@@ -67,7 +67,18 @@ const ProjectDiv:FC<{project : IArchive}> = ({project}) => {
         >
             <div>
                 <span>{project.category}</span>
-                <h3>{project.name}</h3>
+                {project.livelink ? 
+                    <h3> 
+                        <Link  href={`${project?.livelink?.href}`}> 
+                            <a target='blank'> {project.name}  </a> 
+                        </Link>  
+                    </h3> : 
+                    <h3> 
+                        <Link  href={`${project?.gitlink?.href}`}> 
+                            <a target='blank'> {project.name}  </a> 
+                        </Link>  
+                    </h3>
+                }
                 <p>{project.details}</p>
                 <div className={styles.icon}>
                 {project?.gitlink?.href &&
