@@ -13,7 +13,7 @@ export const Featured: Array<IFeatured> = [
     {
         category : "Blockgames Collaboration", 
         name : "Metafiles", 
-        details : "A dapp built to upload and share files in a publicly or privately on the platform. The dapp uses ipfs for file storage and addressing and the blockchain for keeping record of updates &/ uploads - as a way to make the data immutable.",
+        details : "A dapp built to upload and share files publicly or privately on the platform. The dapp uses ipfs for file storage and addressing and the blockchain for keeping record of updates &/ uploads - as a way to make the data immutable.",
         id:1,
         gitlink : new URL("https://github.com/Phyf3/Decentralized-Library"),
         livelink : new URL("https://metafiles.netlify.app")

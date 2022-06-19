@@ -16,7 +16,7 @@
 }
 .introduction {
   /* height: 80vh;; */
-  margin-top:3rem;
+  margin-top:0rem;
   /* border: 1px solid white; */
 }
 .introduction>h1>span{
@@ -26,9 +26,10 @@
 }
 .introduction>h1 {
   color:#c1c1c1ab;
-  font-size: 3.2rem;
+  font-size: 3.9rem;
   line-height: 3rem;;
   line-height:3.6rem;;
+
 }
 .introduction h2 {
   color:#eeececac;
@@ -37,8 +38,10 @@
   line-height: 2rem;
 }
 .introduction p{
-  font-size: 1.4rem;
-  line-height: 1.7rem;
+  position: relative;
+  bottom:1rem;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
 }
 
 
@@ -295,8 +298,22 @@
   border-bottom: 1px solid var(--red);
   width:fit-content;
 }
-
-
+.contact_intro {
+  display: grid;
+  place-items: center;
+  padding:0;
+  margin:0;
+  width:fit-content
+}
+.contact_intro ul {
+  margin:0 ;
+  padding:0rem 1rem;
+  width:50vw;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
 .main_desktop, .left, .right {
   display: none;
@@ -304,7 +321,7 @@
 
 
 @media screen and (min-width: 1024px) {
-  .mobile_header {
+  .mobile_header, .contact_intro {
     display: none;
   }
   .desktop_header {

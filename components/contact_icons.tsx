@@ -9,15 +9,15 @@ const ContactIcons:FC = () => {
             <li> 
                 <Link href="https://github.com/Phyf3"> 
                     <a target="blank">
-                    <Image src='/images/github.svg' alt = "github" width={20} height={20}/>  
+                    <Image src='/images/github.svg' alt = "github" width={25} height={25}/>  
                     </a>
                 </Link> 
             </li>
 
             <li> 
-                <Link href="https://twitter.com/Phyf3Script"> 
+                <Link href="https://twitter.com/dotunicode"> 
                     <a target="blank">
-                    <Image src='/images/twitter.svg' alt = "github" width={20} height={20}/>  
+                    <Image src='/images/twitter.svg' alt = "github" width={25} height={25}/>  
                     </a>
                 </Link> 
             </li>
@@ -25,7 +25,7 @@ const ContactIcons:FC = () => {
             <li> 
                 <Link href="https://www.linkedin.com/in/philip-adewole-0980921b2/"> 
                     <a target="blank">
-                    <Image src='/images/linkedin.svg' alt = "github" width={20} height={20}/>  
+                    <Image src='/images/linkedin.svg' alt = "github" width={25} height={25}/>  
                     </a>
                 </Link> 
             </li>
@@ -33,7 +33,7 @@ const ContactIcons:FC = () => {
             <li> 
                 <Link href="mailto:phyf3script@gmail.com"> 
                     <a target="blank">
-                    <Image src='/images/mail.svg' alt = "github" width={20} height={20}/>  
+                    <Image src='/images/mail.svg' alt = "github" width={25} height={25}/>  
                     </a>
                 </Link> 
             </li>  

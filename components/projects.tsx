@@ -19,7 +19,7 @@ const Projects:FC = () => {
             <h2>If you`d like to see more </h2>
 
             <div className={styles.more__links}>           
-              <span><Link href='/archive'> View Project Archive.</Link> </span>
+              <span><Link href='/archive'> View Archive.</Link> </span>
               {/* <span><Link href='/'>Explore Github Repositories.</Link></span> */}
             </div>
           </div>
