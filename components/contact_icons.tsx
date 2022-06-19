@@ -31,8 +31,8 @@ const ContactIcons:FC = () => {
             </li>
 
             <li> 
-                <Link href="mailto:Phyf3Script@gmail.com"> 
-                    <a href="blank">
+                <Link href="mailto:phyf3script@gmail.com"> 
+                    <a target="blank">
                     <Image src='/images/mail.svg' alt = "github" width={20} height={20}/>  
                     </a>
                 </Link> 
