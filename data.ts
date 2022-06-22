@@ -31,7 +31,15 @@ export const Featured: Array<IFeatured> = [
         id:3,
         gitlink : new URL("https://github.com/Phyf3/spread"),
         livelink : new URL('https://spread-sigma.vercel.app/')
-    }
+    },
+    {
+        category: "FrontendMentor Challenge",
+        name : "rest-countries",
+        details: "web app to get information about countries, data fetched from rest apis, built with react",
+        id : 4,
+        gitlink : new URL("https://github.com/Phyf3/REST-Countries-web-app"),
+        livelink : new URL("https://rest-countries-web-appp.vercel.app/")
+    },
 ]
 
 interface IArchiveProjects { 
@@ -50,10 +58,11 @@ export const ArchiveProjects : Array<IArchiveProjects> = [
         gitlink : new URL("https://github.com/Phyf3/data-structures-and-algorithms"),
     },
     {
-        name : "speedrunEth-quests",
-        details: "repo containing my completed speedruneth quests",
+        name : "rest-countries",
+        details: "web app to get information about countries, data fetched from rest apis, built with react",
         id : 2,
-        gitlink : new URL("https://github.com/Phyf3/SpeedrunEth-Quests"),
+        gitlink : new URL("https://github.com/Phyf3/REST-Countries-web-app"),
+        livelink : new URL("https://rest-countries-web-appp.vercel.app/")
     },
     {
         name : "voting dapp",
@@ -62,32 +71,31 @@ export const ArchiveProjects : Array<IArchiveProjects> = [
         gitlink : new URL("https://github.com/maura-dev/Voting-Dapp.git"),
     },
     {
-        name : "rest-countries",
-        details: "web app to get information about countries, data fetched from rest apis, built with react",
-        id : 4,
-        gitlink : new URL("https://github.com/Phyf3/REST-Countries-web-app"),
-        livelink : new URL("https://rest-countries-web-appp.vercel.app/")
-    },
-    {
         name : "tip-calculator",
         details: "a vanilla js project to calculate tips for a service in percentages and per person",
-        id : 5,
+        id : 4,
         gitlink : new URL("https://github.com/Phyf3/tip-calculator-web-app-with-vanilla-js"),
         livelink : new URL("https://tip-calculator-phyf3.vercel.app/")
     },
     {
         name : "rock-paper-scissors game",
         details: "",
-        id : 6,
+        id : 5,
         gitlink : new URL("https://github.com/Phyf3/rock-paper-scissors-game-using-vanilla-js"),
         livelink : new URL("https://rock-paper-scissors-game-using-vanilla-js.vercel.app/")
     },
     {
         name : "todo app",
         details: "learning project built to learn how to work with nodejs, express and mongodb ",
-        id : 7,
+        id : 6,
         gitlink : new URL("https://github.com/Phyf3/todo-app-mernstack"),
         livelink : new URL("https://mernstack-taskapp.netlify.app/")
+    },
+    {
+        name : "speedrunEth-quests",
+        details: "repo containing my completed speedruneth quests",
+        id : 7,
+        gitlink : new URL("https://github.com/Phyf3/SpeedrunEth-Quests"),
     },
     {
         name : "indiebrew-landing-page",
@@ -96,5 +104,4 @@ export const ArchiveProjects : Array<IArchiveProjects> = [
         gitlink : new URL("https://github.com/Phyf3/IndieBrew-Landing-Page"),
         livelink : new URL("http://indie-brew-landing-page-gray.vercel.app/")
     }
-
 ]

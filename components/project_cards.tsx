@@ -52,6 +52,7 @@ const ProjectDiv:FC<{project : IProject}> = ({project}) => {
                             <Image src='/images/github.svg' alt="github" width={20} height={20} />
                         </a>
                     </Link>
+                    
                 }
 
                 {project?.livelink?.href &&

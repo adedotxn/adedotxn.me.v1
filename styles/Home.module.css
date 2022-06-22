@@ -167,7 +167,7 @@
 .projects h1 span:nth-child(1),
 .contact h1 {
   font-family: 'Fira Code';
-  color:var(--red);
+  color:var(--highlight);
   font-size: 1.1rem;
 }
 .about h1 span:nth-child(2) {
@@ -226,7 +226,7 @@
 }
 
 .card span {
-  color :var(--red);
+  color :var(--highlight);
   font-size: 1.1rem;
   font-weight: 600;
 }
@@ -267,7 +267,7 @@
   font-size: 1.3rem;
 }
 .more__links span {
-  border-bottom: 1px solid var(--red);
+  border-bottom: 1px solid var(--highlight);
   width:fit-content;
 }
 .more__links {
@@ -307,7 +307,7 @@
 }
 .archive>div h3{
   padding: 0;
-  border-bottom: 1px solid var(--red);
+  border-bottom: 1px solid var(--highlight);
   width:fit-content;
 }
 .archive>div>p {
@@ -367,7 +367,7 @@
     position: absolute;
     width: 100%;
     height: 1px;
-    background: var(--red);
+    background: var(--highlight);
     top: 100%;
     left: 0;
     pointer-events: none;
@@ -441,7 +441,7 @@
     right: 0rem;
   }
   .right div:hover {
-    color:var(--red)
+    color:var(--highlight)
   }
   .right div {
     transform: rotate(-90deg);
@@ -473,7 +473,7 @@
   .left div:nth-child(2) {
     width:2px;
     height:100vh;
-    background-color: var(--red);
+    background-color: var(--highlight);
   }
   .left ul li:hover {
     transform:scale(1.1) translateY(-15%);
@@ -576,7 +576,7 @@
     transition: all .15s linear 0s;
   }
   .more__links span:hover {
-    border-bottom: 1px solid var(--red);
+    border-bottom: 1px solid var(--highlight);
     transform:translateY(10%)
   }
   .contact {

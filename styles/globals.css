@@ -21,19 +21,21 @@ a {
 }
 
 :root {
-  --bg : #171717;
+  --bg : #1C2121;
   --grey : #EDEDED;
   --darkbrown : #444444;
   --white : #ffff;
-  --red : #ff0947;
-  --lightbg:#55555551;
+  --highlight : #1EAE5A;
+  --lightbg:#2F3737;
 }
 
 footer {
   display: grid;
   place-items: center;
+  color: grey;
 }
 
 footer p span {
-  border-bottom: 1px solid var(--grey);
+  text-decoration: underline;
+  text-decoration-style: wavy;
 }
