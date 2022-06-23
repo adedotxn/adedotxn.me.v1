@@ -15,7 +15,7 @@ const ContactIcons:FC = () => {
             </li>
 
             <li> 
-                <Link href="https://twitter.com/dotunicode"> 
+                <Link href="https://twitter.com/adedotxn"> 
                     <a target="blank">
                     <Image src='/images/twitter.svg' alt = "github" width={25} height={25}/>  
                     </a>
