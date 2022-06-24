@@ -65,43 +65,30 @@ export const ArchiveProjects : Array<IArchiveProjects> = [
         livelink : new URL("https://rest-countries-web-appp.vercel.app/")
     },
     {
-        name : "voting dapp",
-        details : "codebase for a voting dapp i contributed to during a blockchain cohort,i mainly worked with solidity",
+        name : 'space-tourism website',
+        details : "a multipage website for an hypothetical space tourism company",
         id: 3,
-        gitlink : new URL("https://github.com/maura-dev/Voting-Dapp.git"),
-    },
-    {
-        name : "tip-calculator",
-        details: "a vanilla js project to calculate tips for a service in percentages and per person",
-        id : 4,
-        gitlink : new URL("https://github.com/Phyf3/tip-calculator-web-app-with-vanilla-js"),
-        livelink : new URL("https://tip-calculator-phyf3.vercel.app/")
+        gitlink : new URL('https://github.com/Phyf3/space-tourism'),
+        livelink : new URL('http://space-tourism-phyf3.vercel.app/') 
     },
     {
         name : "rock-paper-scissors game",
         details: "",
-        id : 5,
+        id : 4,
         gitlink : new URL("https://github.com/Phyf3/rock-paper-scissors-game-using-vanilla-js"),
         livelink : new URL("https://rock-paper-scissors-game-using-vanilla-js.vercel.app/")
     },
     {
-        name : "todo app",
-        details: "learning project built to learn how to work with nodejs, express and mongodb ",
-        id : 6,
-        gitlink : new URL("https://github.com/Phyf3/todo-app-mernstack"),
-        livelink : new URL("https://mernstack-taskapp.netlify.app/")
-    },
-    {
         name : "speedrunEth-quests",
         details: "repo containing my completed speedruneth quests",
-        id : 7,
+        id : 5,
         gitlink : new URL("https://github.com/Phyf3/SpeedrunEth-Quests"),
     },
     {
-        name : "indiebrew-landing-page",
-        details: "",
-        id : 8,
-        gitlink : new URL("https://github.com/Phyf3/IndieBrew-Landing-Page"),
-        livelink : new URL("http://indie-brew-landing-page-gray.vercel.app/")
-    }
+        name : "tip-calculator",
+        details: "a vanilla js project to calculate tips for a service in percentages and per person",
+        id : 6,
+        gitlink : new URL("https://github.com/Phyf3/tip-calculator-web-app-with-vanilla-js"),
+        livelink : new URL("https://tip-calculator-phyf3.vercel.app/")
+    },
 ]
