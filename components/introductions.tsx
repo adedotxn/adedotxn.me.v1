@@ -43,7 +43,7 @@ const Intro = () => {
             Always open to learning new things and currently exploring the decentralised web and MERN stack web development.
             </m.p>
             <m.p variants={items} className={styles.available}>
-            <span>👇🏾</span> Currently open to opportunities 
+            {/* <span>👇🏾</span> Currently open to opportunities  */}
             </m.p>
 
             <m.div variants={items} className={styles.contact_intro}>
