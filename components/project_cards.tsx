@@ -9,7 +9,7 @@ import LiveSvg from "./svg/live";
 const ProjectCard: FC = () => {
   return (
     <>
-      <div className="container">
+      <div className={styles.container}>
         {Featured.map((project) => {
           return <ProjectDiv key={project.id} project={project} />;
         })}
@@ -18,12 +18,9 @@ const ProjectCard: FC = () => {
   );
 };
 
-const ProjectDiv: FC<{ project: ProjectsInterface }> = ({ project }) => {
+const ProjectDiv: FC<{project: ProjectsInterface }> = ({ project }) => {
   return (
-    <div className={styles.card}>
-      {/* Category */}
-      {/* <span>{project.category}</span> */}
-
+    <div  className={styles.card}>
       {/* Name */}
       {project.livelink ? (
         <h2>

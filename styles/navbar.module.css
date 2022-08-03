@@ -1,0 +1,124 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    align-items: center;
+}
+
+.header h1 {
+    font-weight: 500;
+}
+
+.navlist {
+    display: none;
+}
+
+.dropdown {
+    position: absolute;
+    z-index: 3;
+    background-color: var(--bg);
+    width:100vw;
+    height:100vh;
+    transition: all 15s linear 0s;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown>ul {
+    list-style-type: none;
+    display: grid;
+    place-items: center;
+    padding: 0;
+    margin: 3vh 0 0 0 ;
+}
+.dropdown>ul>li {
+    font-size: 2.2rem;
+    margin-top: 3rem;
+    text-transform: uppercase;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    letter-spacing: .2rem;
+}
+.dropdown>ul>li:nth-child(4) {
+    font-size: 1.2rem;
+    border-bottom: 1px solid grey;
+
+}
+.dropdown>ul>li:nth-child(5) {
+    margin-top: 1.5rem;
+    border-bottom: 1px solid grey;
+}
+.dropdown>ul>li button {
+    border: 0px solid;
+    background-color: transparent;
+    color: var(--white);
+    font-size: 1.2rem;
+    padding: 0;
+    text-transform: uppercase;
+}
+.contacts {
+    display: grid;
+    place-items: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+.contacts ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0 0 0 0 ;
+    
+}
+.contacts ul li {
+    padding: 0rem 1rem;
+    /* border:1px solid white; */
+    margin: 0;
+}
+
+.burger {
+    -webkit-transform: scale(.8);
+            transform: scale(.8);
+}
+
+@media screen and (min-width: 1024px) {
+    .burger {
+        display: none;
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0rem 2rem;
+    }
+
+    .navlist {
+        display: block;
+    }
+
+    .header ul {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+    }
+
+    .header ul li {
+        margin-right: 1.3rem;
+        font-size: 1.2rem;
+    }
+
+    .header ul li:last-child {
+        border: 1px solid #c1c1c1ab;
+    }
+
+    .header ul li:last-child:hover {
+        border: 0px solid #c1c1c1ab;
+    }
+
+    .header ul li a span {
+        font-family: 'Fira Code';
+        color: white
+    }
+}

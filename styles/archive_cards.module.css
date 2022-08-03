@@ -16,6 +16,8 @@
 .archive>div h3 {
     padding: 0;
     border-bottom: 1px solid var(--highlight);
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
 }
 
@@ -25,6 +27,8 @@
 
 .viewing {
     /* border: 1px solid white; */
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     display: flex;
     margin-top: .5rem;
@@ -45,6 +49,8 @@
 
 @media screen and (min-width: 1024px) {
     .archive>div {
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
         width: fit-content;
     }
 
