@@ -1,110 +1,95 @@
-import Image from "next/image"
-import { FC } from "react"
-import styles from '../styles/Home.module.css'
-import { ArchiveProjects } from "../data"
-import Link from "next/link"
-import {LazyMotion, m } from "framer-motion"
+import Image from "next/image";
+import { FC } from "react";
+import styles from "../styles/archive_cards.module.css";
+import { ArchiveProjects } from "../utils/data";
+import Link from "next/link";
+import { LazyMotion, m } from "framer-motion";
+import { ProjectsWithoutStack } from "../utils/interface";
+import LiveSvg from "./svg/live";
+import GithubSvg from "./svg/github";
 
+const loadFeatures = () => import("../utils/features.js").then((res) => res.default);
 
-const loadFeatures = () => 
-  import ('./features.js').then(res => res.default)
+const ArchiveCard: FC = () => {
+  return (
+    <>
+      <div className={styles.archive_container}>
+        {ArchiveProjects?.map((project) => {
+          return <ProjectDiv key={project.id} project={project} />;
+        })}
+      </div>
+    </>
+  );
+};
 
-interface IArchive  {
-    category?:string, 
-    name:string, 
-    details?:string,
-    id: number
-    gitlink?:URL,
-    livelink?: URL
-}
+const ProjectDiv: FC<{ project: ProjectsWithoutStack }> = ({ project }) => {
+  const container = {
+    hidden: { opacity: 0, x: -50 },
+    show: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.7,
+        staggerChildren: 0.3,
+        delayChildren: 0.2,
+      },
+    },
+  }
+  return (
+    <LazyMotion features={loadFeatures}>
+      <m.section
+        className={styles.archive}
+        animate="show"
+        initial="hidden"
+        variants={container}
+      >
+        <div>
+          {/* <span>{project.category}</span> */}
+          {project.livelink ? (
+            <h3>
+              <Link href={`${project?.livelink?.href}`}>
+                <a target="blank"> {project.name} </a>
+              </Link>
+            </h3>
+          ) : (
+            <h3>
+              <Link href={`${project?.gitlink?.href}`}>
+                <a target="blank"> {project.name} </a>
+              </Link>
+            </h3>
+          )}
+          <p>{project.details}</p>
+          
+          {/* Project Links */}
+          {/* Github */}
+          <div className={styles.viewing}>
+            {project?.gitlink?.href && (
+              <div>
+                <Link href={`${project?.gitlink?.href}`}>
+                  <a target="blank">
+                    <GithubSvg />
+                    <span>Code</span>
+                  </a>
+                </Link>
+              </div>
+            )}
 
-const ArchiveCard:FC = () => {
-    return(
-        <>
-        <div className={styles.archive_container}>
-            {ArchiveProjects?.map((project) => {
-                return(
-                    <ProjectDiv key={project.id} project = {project}/>
-                )
-            })}
+            {/* Livesite */}
+            {project?.livelink?.href && (
+              <div>
+                <Link href={`${project?.livelink?.href}`}>
+                  <a target="blank">
+                    <LiveSvg />
+                    <span>Live Site</span>
+                  </a>
+                </Link>
+              </div>
+            )}
+          </div>
         </div>
-        </>
-    )
-}
+      </m.section>
+    </LazyMotion>
+  );
+};
 
-const ProjectDiv:FC<{project : IArchive}> = ({project}) => {
-    // const controls = useAnimation()
-    // const [ref, inView] = useInView({
-    //     threshold:0.3
-    // })
-    const container = {
-        hidden: { opacity:0, x:-50},
-        show: {
-          opacity:1,
-          x : 0,
-          transition: {
-            duration: .7,
-            staggerChildren: 0.3,
-            delayChildren: 0.2
-          }
-        }
-      };
-    //   const items = {
-    //     hidden: {opacity:0, x: 50 },
-    //     show: {opacity:1, x: 0, transition: {duration:.5}}
-    //   };
-
-    // useEffect(() => {
-    //     if(inView) {
-    //         controls.start('show')
-    //     }
-    // }, [controls, inView])
-
-    return (
-        <LazyMotion features={loadFeatures}>
-        <m.section
-            className={styles.archive}
-            animate = "show"
-            initial = "hidden"
-            variants={container}
-        >
-            <div>
-                <span>{project.category}</span>
-                {project.livelink ? 
-                    <h3> 
-                        <Link  href={`${project?.livelink?.href}`}> 
-                            <a target='blank'> {project.name}  </a> 
-                        </Link>  
-                    </h3> : 
-                    <h3> 
-                        <Link  href={`${project?.gitlink?.href}`}> 
-                            <a target='blank'> {project.name}  </a> 
-                        </Link>  
-                    </h3>
-                }
-                <p>{project.details}</p>
-                <div className={styles.icon}>
-                {project?.gitlink?.href &&
-                    <Link href={`${project?.gitlink?.href}`}> 
-                        <a target="blank">
-                            <Image src='/images/github.svg' alt="github" width={20} height={20} />
-                        </a>
-                    </Link>
-                }
-
-                {project?.livelink?.href &&
-                    <Link href={`${project?.livelink?.href}`}>
-                        <a target="blank">
-                            <Image src='/images/share.svg' alt="github" layout="fill" className={styles.share} />
-                        </a>
-                    </Link>
-                }
-                </div>
-            </div>
-        </m.section> 
-        </LazyMotion>
-    )
-}
-
-
-export default ArchiveCard
+export default ArchiveCard;

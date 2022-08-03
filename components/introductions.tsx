@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 import ContactIcons from "./contact_icons"
 
 const loadFeatures = () => 
-  import ('./features.js').then(res => res.default)
+  import ('../utils/features.js').then(res => res.default)
 
 const Intro = () => {
     const container = {

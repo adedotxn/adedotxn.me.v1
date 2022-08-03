@@ -23,10 +23,12 @@ a {
 :root {
   --bg : #1C2121;
   --grey : #EDEDED;
-  --darkbrown : #444444;
+  /* --darkbrown : #444444; */
   --white : #ffff;
   --highlight : #1EAE5A;
   --lightbg:#2F3737;
+  --darkbrown :#2a3030 ;
+
 }
 
 footer {

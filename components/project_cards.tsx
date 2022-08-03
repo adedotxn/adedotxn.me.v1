@@ -1,73 +1,84 @@
-import Image from "next/image"
-import Link from "next/link"
-import { FC } from "react"
-import { Featured } from "../data"
-import styles from '../styles/Home.module.css'
+import Link from "next/link";
+import { FC } from "react";
+import { Featured } from "../utils/data";
+import styles from "../styles/project_cards.module.css";
+import { ProjectsInterface } from "../utils/interface";
+import GithubSvg from "./svg/github";
+import LiveSvg from "./svg/live";
 
-interface IProject  {
-    category:string, 
-    name:string, 
-    details:string,
-    id: number
-    gitlink?:URL,
-    livelink?:URL
-}
+const ProjectCard: FC = () => {
+  return (
+    <>
+      <div className="container">
+        {Featured.map((project) => {
+          return <ProjectDiv key={project.id} project={project} />;
+        })}
+      </div>
+    </>
+  );
+};
 
+const ProjectDiv: FC<{ project: ProjectsInterface }> = ({ project }) => {
+  return (
+    <div className={styles.card}>
+      {/* Category */}
+      {/* <span>{project.category}</span> */}
 
-const ProjectCard:FC = () => {
-    return(
-        <>
-        <div className="container">
-            {Featured.map((project) => {
-                return(
-                    <ProjectDiv key={project.id} project = {project}/>
-                )
-            })}
-        </div>
-        </>
-    )
-}
+      {/* Name */}
+      {project.livelink ? (
+        <h2>
+          <Link href={`${project?.livelink?.href}`}>
+            <a target="blank"> {project.name} </a>
+          </Link>
+        </h2>
+      ) : (
+        <h2>
+          <Link href={`${project?.gitlink?.href}`}>
+            <a target="blank"> {project.name} </a>
+          </Link>
+        </h2>
+      )}
 
-const ProjectDiv:FC<{project : IProject}> = ({project}) => {
-    return (
-        <div className={styles.card}>
-            <span>{project.category}</span>
-            {project.livelink ? 
-                <h2> 
-                    <Link  href={`${project?.livelink?.href}`}> 
-                        <a target='blank'> {project.name}  </a> 
-                    </Link>  
-                </h2> : 
-                <h2> 
-                    <Link  href={`${project?.gitlink?.href}`}> 
-                        <a target='blank'> {project.name}  </a> 
-                    </Link>  
-                </h2>
-            }
-            <p>{project.details}</p>
+      {/* Project Details */}
+      <p>{project.details}</p>
+
+      {/* Stack */}
+      <div className={styles.stack_container}>
+        {project.stack.map((stack) => (
+          <div key={stack} className={styles.stack}>
+            <p>{stack}</p>
+          </div>
+        ))}
+      </div>
+
+      {/* Project Links */}
+      {/* Github */}
+      <div className={styles.viewing}>
+        {project?.gitlink?.href && (
             <div>
-            {project?.gitlink?.href &&
-                    <Link href={`${project?.gitlink?.href}`}> 
-                        <a target="blank">
-                            <Image src='/images/github.svg' alt="github" width={20} height={20} />
-                        </a>
-                    </Link>
-                    
-                }
-
-                {project?.livelink?.href &&
-                    <Link href={`${project?.livelink?.href}`}>
-                        <a target="blank">
-                            <Image src='/images/share.svg' alt="github" layout="fill" className={styles.share} />
-                        </a>
-                    </Link>
-                }
+                <Link href={`${project?.gitlink?.href}`}>
+                    <a target="blank">
+                    <GithubSvg/>
+                    <span>Code</span>
+                    </a>
+                </Link>
             </div>
-    
+        )}
 
-        </div> 
-    )
-}
+        {/* Livesite */}
+        {project?.livelink?.href && (
+        <div>
+          <Link href={`${project?.livelink?.href}`}>
+            <a target="blank">
+                <LiveSvg/>
+                <span>Live Site</span>
+            </a>
+          </Link>
+        </div>
+        )}
+      </div>
+    </div>
+  );
+};
 
-
-export default ProjectCard
+export default ProjectCard;
