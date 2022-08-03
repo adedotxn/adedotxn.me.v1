@@ -2,7 +2,7 @@
   background-color: var(--lightbg);
   padding: 1rem 1rem;
   border-radius: .5rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   transition: all .15s linear 0s;
 }
 
@@ -23,7 +23,8 @@
 }
 .card:hover {
   background-color: var(--darkbrown);
-  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 .card>div, 
 .icon {
@@ -39,8 +40,11 @@
 .stack_container {
   display:flex;
   place-items: center;
+  width:70vw;
 }
 .stack {
+  width:-webkit-fit-content;
+  width:-moz-fit-content;
   width:fit-content;
   white-space: nowrap;
   margin:0;
@@ -50,6 +54,8 @@
   padding:.5rem .5rem 0 .5rem;
   font-weight: 600;
   margin: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   border-bottom: 1px solid gray;
 
@@ -59,6 +65,8 @@
 
 .viewing {
   /* border: 1px solid white; */
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   display: flex;
   margin-top: .5rem;
@@ -79,10 +87,19 @@
 
 
 @media screen and (min-width: 1024px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    -webkit-column-gap: 1rem;
+            column-gap: 1rem;
+  }
 
   .card {
-    width:45vw;
+    width:27vw;
     transition: all .15s linear 0s;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   .card>div>a {
     cursor: pointer;
@@ -96,4 +113,6 @@
   .stack {
     width:30vw;
   }
+
+
 }

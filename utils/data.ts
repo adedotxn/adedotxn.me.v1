@@ -8,7 +8,7 @@ export const Featured: Array<ProjectsInterface> = [
         id:1,
         gitlink : new URL("https://github.com/Phyf3/savelink"),
         livelink : new URL("http://savelink.vercel.app/"),
-        stack : ["Next.js", "MongoDB", "React Query"]
+        stack : ["TypeScript","Next.js", "MongoDB"]
     },
     {
         category : "Blockgames Collaboration", 
