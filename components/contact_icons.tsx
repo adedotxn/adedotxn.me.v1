@@ -7,7 +7,7 @@ const ContactIcons:FC = () => {
     return (
         <ul>
             <li> 
-                <Link href="https://github.com/Phyf3"> 
+                <Link href="https://github.com/adedotxn"> 
                     <a target="blank">
                     <Image src='/images/github.svg' alt = "github" width={25} height={25}/>  
                     </a>

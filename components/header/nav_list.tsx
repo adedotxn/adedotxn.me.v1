@@ -38,7 +38,7 @@ const Navlist = () => {
         </li>
 
         <li className={[styles.link, styles.link_anim].join(" ")}>
-          <Link href="https://github.com/Phyf3">
+          <Link href="https://github.com/adedotxn">
             <a target="_blank">Github</a>
           </Link>
         </li>
