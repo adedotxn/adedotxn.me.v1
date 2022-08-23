@@ -1,4 +1,5 @@
 export interface ProjectsInterface {
+    status: boolean;
     category: string;
     name: string;
     details: string;

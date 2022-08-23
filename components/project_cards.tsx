@@ -18,62 +18,76 @@ const ProjectCard: FC = () => {
   );
 };
 
-const ProjectDiv: FC<{project: ProjectsInterface }> = ({ project }) => {
+const ProjectDiv: FC<{ project: ProjectsInterface }> = ({ project }) => {
   return (
-    <div  className={styles.card}>
+    <div className={styles.card}>
       {/* Name */}
-      {project.livelink ? (
-        <h2>
-          <Link href={`${project?.livelink?.href}`}>
-            <a target="blank"> {project.name} </a>
-          </Link>
-        </h2>
-      ) : (
-        <h2>
-          <Link href={`${project?.gitlink?.href}`}>
-            <a target="blank"> {project.name} </a>
-          </Link>
-        </h2>
-      )}
+      <div className={styles.top}>
+        {project.livelink ? (
+          <h2>
+            <Link href={`${project?.livelink?.href}`}>
+              <a target="blank"> {project.name} </a>
+            </Link>
+          </h2>
+        ) : (
+          <h2>
+            <Link href={`${project?.gitlink?.href}`}>
+              <a target="blank"> {project.name} </a>
+            </Link>
+          </h2>
+        )}
+        
+        {!project.status && (
+          <div>
+            <button className={styles.ongoing} disabled>
+              Ongoing
+            </button>
+          </div>
+        )}
+      </div>
 
       {/* Project Details */}
       <p>{project.details}</p>
 
       {/* Stack */}
       <div className={styles.stack_container}>
-        {project.stack.map((stack) => (
-          <div key={stack} className={styles.stack}>
-            <p>{stack}</p>
-          </div>
-        ))}
+        <ul className={styles.stack}>
+          {project.stack.map((stack) => (
+            <li key={stack}>{stack}</li>
+          ))}
+        </ul>
       </div>
 
       {/* Project Links */}
       {/* Github */}
-      <div className={styles.viewing}>
-        {project?.gitlink?.href && (
+      {project.status && (
+        <div className={styles.viewing}>
+          {project?.gitlink?.href && (
             <div>
-                <Link href={`${project?.gitlink?.href}`}>
-                    <a target="blank">
-                    <GithubSvg/>
-                    <span>Code</span>
-                    </a>
-                </Link>
+              <Link href={`${project?.gitlink?.href}`}>
+                <a target="blank">
+                  <GithubSvg />
+                  <span>Code</span>
+                </a>
+              </Link>
             </div>
-        )}
+          )}
 
-        {/* Livesite */}
-        {project?.livelink?.href && (
-        <div>
-          <Link href={`${project?.livelink?.href}`}>
-            <a target="blank">
-                <LiveSvg/>
-                <span>Live Site</span>
-            </a>
-          </Link>
+          {/* Livesite */}
+          {project?.livelink?.href && (
+            <div>
+              <Link href={`${project?.livelink?.href}`}>
+                <a target="blank">
+                  <LiveSvg />
+                  <span>Live Site</span>
+                </a>
+              </Link>
+            </div>
+          )}
         </div>
-        )}
-      </div>
+      )}
+
+     
     </div>
   );
 };

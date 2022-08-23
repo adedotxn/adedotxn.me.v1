@@ -5,8 +5,9 @@
   border: none;
   padding: .8rem 1rem;
   margin: 0;
-  font-family: inherit;
-  font-size: inherit;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
   position: relative;
   display: inline-block;
 }
