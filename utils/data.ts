@@ -17,7 +17,7 @@ export const Featured: Array<ProjectsInterface> = [
         name: "Buildd 🛠", 
         details: "A web app for people with ideas to put out their ideas, investors to look through ideas they might like to invest in and people looking to collaborate on ideas to reach out and connect.",
         id:1.5,
-        livelink : new URL("http://savelink.vercel.app/"),
+        livelink : new URL("http://github.com/adedotxn"),
         stack : ["TypeScript","Next.js","SCSS","MongoDB"]
     },
     {
