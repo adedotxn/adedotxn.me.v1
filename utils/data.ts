@@ -16,16 +16,16 @@ export const Featured: Array<ProjectsInterface> = [
         category: "Personal Project", 
         name: "Buildd 🛠", 
         details: "A web app for people with ideas to put out their ideas, investors to look through ideas they might like to invest in and people looking to collaborate on ideas to reach out and connect.",
-        id:1.5,
+        id:2,
         livelink : new URL("http://github.com/adedotxn"),
-        stack : ["TypeScript","Next.js","SCSS","MongoDB"]
+        stack : ["TypeScript","Next.js","SCSS","MongoDB", "Redux"]
     },
     {
         status:true,
         category : "Blockgames Collaboration", 
         name : "Metafiles", 
         details : "A decentralized application for social file sharing and file storage on the blockchain. Worked on this project with a team at a blockchain training program for developers",
-        id:1,
+        id:3,
         gitlink : new URL("https://github.com/adedotxn/Decentralized-Library"),
         livelink : new URL("https://metafiles.netlify.app"),
         stack : ["React.js", "Solidity", "Ipfs", "Chakra UI"]

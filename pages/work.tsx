@@ -12,9 +12,11 @@ const Work = () => {
             <li>JavaScript</li>
             <li>React</li>
             <li>Next.js</li>
+            <li>CSS</li>
+            <li>Sass</li>
+            <li>Redux & Redux Toolkit</li>
             <li>Solidity</li>
             <li>Git & Github</li>
-            <li>Vercel</li>
           </ul>
         </div>
 
