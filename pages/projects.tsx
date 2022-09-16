@@ -1,6 +1,6 @@
 import Link from "next/link";
 // import Projects from "../components/projects";
-import ProjectCard from "../components/project_cards";
+import ProjectCard from "../components/cards/project_cards";
 import styles from "../styles/project.module.css";
 
 const Projects = () => {

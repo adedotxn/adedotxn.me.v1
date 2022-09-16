@@ -1,50 +1,38 @@
 import Image from "next/image";
 import { FC } from "react";
-import styles from "../styles/archive_cards.module.css";
-import { ArchiveProjects } from "../utils/data";
+import styles from "../../styles/archive_cards.module.css";
+import { ArchiveProjects } from "../../utils/data";
 import Link from "next/link";
 import { LazyMotion, m } from "framer-motion";
-import { ProjectsWithoutStack } from "../utils/interface";
-import LiveSvg from "./svg/live";
-import GithubSvg from "./svg/github";
+import { ProjectsWithoutStack } from "../../utils/interface";
+import LiveSvg from "../svg/live";
+import GithubSvg from "../svg/github";
+import { projectContainer } from "../animation/animation";
 
-const loadFeatures = () => import("../utils/features.js").then((res) => res.default);
+const loadFeatures = () => import("../../utils/features.js").then((res) => res.default);
 
 const ArchiveCard: FC = () => {
   return (
     <>
       <div className={styles.archive_container}>
         {ArchiveProjects?.map((project) => {
-          return <ProjectDiv key={project.id} project={project} />;
+          return <Cards key={project.id} project={project} />;
         })}
       </div>
     </>
   );
 };
 
-const ProjectDiv: FC<{ project: ProjectsWithoutStack }> = ({ project }) => {
-  const container = {
-    hidden: { opacity: 0, x: -50 },
-    show: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 0.7,
-        staggerChildren: 0.3,
-        delayChildren: 0.2,
-      },
-    },
-  }
+const Cards: FC<{ project: ProjectsWithoutStack }> = ({ project }) => {
   return (
     <LazyMotion features={loadFeatures}>
       <m.section
         className={styles.archive}
         animate="show"
         initial="hidden"
-        variants={container}
+        variants={projectContainer}
       >
         <div>
-          {/* <span>{project.category}</span> */}
           {project.livelink ? (
             <h3>
               <Link href={`${project?.livelink?.href}`}>

@@ -37,7 +37,7 @@ const Work = () => {
         <div>
           <p>
             Check out
-            <Link href="https://drive.google.com/file/d/1SspjX3pFynhnzA1uL6TS9pNRYAyIwdCu/view?usp=sharing"> my resume/cv</Link> and <br />
+            <Link href="https://drive.google.com/file/d/1khtd4EDODO77k3G0WUig3AoedHEmS_fA/view?usp=sharing"> my resume/cv</Link> and <br />
             <Link href="/projects">my projects</Link>
           </p>
         </div>

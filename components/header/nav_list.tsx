@@ -46,7 +46,7 @@ const Navlist = () => {
         <li>
           <button className={[styles.button, styles.button__mimas].join(" ")}>
             <Link
-              href="https://drive.google.com/file/d/1SspjX3pFynhnzA1uL6TS9pNRYAyIwdCu/view?usp=sharing"
+              href="https://drive.google.com/file/d/1khtd4EDODO77k3G0WUig3AoedHEmS_fA/view?usp=sharing"
               passHref
             >
               <a target="blank">

@@ -8,8 +8,6 @@ const About:FC = () => {
           id = "about" className={styles.about}>
           <h1><span>01.</span> <span> My Arsenal</span> </h1>
 
-          {/* <p> I enjoy building client-side apps and websites,also currently exploring some light backend to maybe transition to full mernstack. I also build apps that leverage on the blockchain and web3 technologies with Solidity, Ipfs, ethers js and co. </p> */}
-
           <div className={styles.technologies}>
             <div>
               {/* eslint-disable-next-line react/no-unescaped-entities*/}

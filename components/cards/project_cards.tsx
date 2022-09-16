@@ -1,24 +1,24 @@
 import Link from "next/link";
 import { FC } from "react";
-import { Featured } from "../utils/data";
-import styles from "../styles/project_cards.module.css";
-import { ProjectsInterface } from "../utils/interface";
-import GithubSvg from "./svg/github";
-import LiveSvg from "./svg/live";
+import { Featured } from "../../utils/data";
+import styles from "../../styles/project_cards.module.css";
+import { ProjectsInterface } from "../../utils/interface";
+import GithubSvg from "../svg/github";
+import LiveSvg from "../svg/live";
 
 const ProjectCard: FC = () => {
   return (
     <>
       <div className={styles.container}>
         {Featured.map((project) => {
-          return <ProjectDiv key={project.id} project={project} />;
+          return <Cards key={project.id} project={project} />;
         })}
       </div>
     </>
   );
 };
 
-const ProjectDiv: FC<{ project: ProjectsInterface }> = ({ project }) => {
+const Cards: FC<{ project: ProjectsInterface }> = ({ project }) => {
   return (
     <div className={styles.card}>
       {/* Name */}
@@ -59,6 +59,8 @@ const ProjectDiv: FC<{ project: ProjectsInterface }> = ({ project }) => {
       </div>
 
       {/* Project Links */}
+      
+
       {/* Github */}
       {project.status && (
         <div className={styles.viewing}>
@@ -72,6 +74,7 @@ const ProjectDiv: FC<{ project: ProjectsInterface }> = ({ project }) => {
               </Link>
             </div>
           )}
+
 
           {/* Livesite */}
           {project?.livelink?.href && (
