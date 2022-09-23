@@ -11,14 +11,14 @@
 
 .introduction>h1 {
   color: #bfbfbf;
-  font-size: 5.3rem;
+  font-size: 5rem;
   line-height: 5rem;
   padding: 0;
   margin: 2rem 0 0 0;
 }
 
 .intro, .spotify {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   line-height: 1.7rem;
   margin: 2rem 0 0 0;
 }
@@ -230,7 +230,7 @@
   display: grid;
   place-items: center;
   padding: 0;
-  margin: .5rem 0 0 0;
+  margin: 2rem 0 0 0;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content

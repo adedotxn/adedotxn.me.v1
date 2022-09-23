@@ -26,9 +26,9 @@ const Home: NextPage = () => {
 
         <div className={styles.right}>
           <div>
-          <Link href="mailto:phyf3script@gmail.com">
+          <Link href="mailto:adedotxn.dev@gmail.com">
             <a target = "blank">
-              Phyf3script@gmail.com
+              adedotxn.dev@gmail.com
             </a>
           </Link>
           </div>

@@ -7,7 +7,6 @@ import ContactIcons from "../contact_icons";
 import Navlist from "./nav_list";
 
 const Navbar = () => {
-  // const [dropdown, setDropdown] = useState(false);
   const {dropdown, setDropdown} = useDropdown()
   const { events } = useRouter();
 
@@ -25,7 +24,7 @@ const Navbar = () => {
 
   return (
     <>
-      <header className={styles.header}>
+      <header className={dropdown ?styles.dropdown_header :styles.header}>
         <h1>
           <Link href="/"> adedotxn.</Link>
         </h1>

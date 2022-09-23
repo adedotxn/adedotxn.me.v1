@@ -6,8 +6,8 @@ export default function Layout({ children }: { children: ReactNode }) {
   return (
     <main>
       <Head>
-        <title>Adedotxn</title>
-        <meta name="description" content="Philip's portfolio site" />
+        <title>adedotxn | software developer </title>
+        <meta name="description" content="Philip's Portfolio | Software Developer" />
         <link rel="icon" href="https://fav.farm/🐱‍👤" />
       </Head>
       <Navbar />

@@ -5,10 +5,9 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'League Spartan', sans-serif;
-  background-color: var(--bg);
+  background-color: var(--bg, black);
   color: var(--white);
   font-size: 16px;
-  ;
   scroll-behavior: smooth;
   scroll-padding-top: 4rem;
 }
@@ -23,7 +22,7 @@ a {
 }
 
 :root {
-  --bg: #1C2121;
+  --bg: #000000;
   --grey: #EDEDED;
   /* --darkbrown : #444444; */
   --white: #ffff;

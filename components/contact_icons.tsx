@@ -23,7 +23,7 @@ const ContactIcons:FC = () => {
             </li>
 
             <li> 
-                <Link href="https://www.linkedin.com/in/philip-adewole-0980921b2/"> 
+                <Link href="https://www.linkedin.com/in/philip-adewole"> 
                     <a target="blank">
                     <Image src='/images/linkedin.svg' alt = "github" width={25} height={25}/>  
                     </a>
@@ -31,7 +31,7 @@ const ContactIcons:FC = () => {
             </li>
 
             <li> 
-                <Link href="mailto:phyf3script@gmail.com"> 
+                <Link href="mailto:adedotxn.dev@gmail.com"> 
                     <a target="blank">
                     <Image src='/images/mail.svg' alt = "github" width={25} height={25}/>  
                     </a>
