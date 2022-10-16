@@ -7,9 +7,7 @@ const Projects = () => {
   return (
     <div className={styles.content}>
       <section id="projects" className={styles.projects}>
-        <h1>
-          Featured Projects
-        </h1>
+        <h1>Featured Projects</h1>
 
         <div className={styles.cards}>
           <ProjectCard />

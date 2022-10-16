@@ -6,16 +6,18 @@ const Work = () => {
     <div className={styles.container}>
       <section className={styles.stack}>
         <div>
-          <h1>Core Stack & Tools</h1>
+          <h1>Libraries & Frameworks I work with</h1>
           <ul>
-            <li>TypeScript</li>
-            <li>JavaScript</li>
+            <li>Typescript</li>
+            <li>Javascript</li>
             <li>React</li>
             <li>Next.js</li>
             <li>CSS</li>
             <li>Sass</li>
-            <li>Redux & Redux Toolkit</li>
-            <li>Solidity</li>
+            <li>Redux Toolkit</li>
+            <li>React Query</li>
+            <li>MongoDB</li>
+            <li>Node</li>
             <li>Git & Github</li>
           </ul>
         </div>
@@ -23,8 +25,9 @@ const Work = () => {
         <div>
           <h1>Familiar With</h1>
           <ul>
-            <li>MongoDB</li>
-            <li>Node</li>
+            <li>Solidity</li>
+            <li>Astro</li>
+            <li>RTK Query</li>
             <li>Express</li>
             <li>Linux</li>
           </ul>
@@ -32,13 +35,15 @@ const Work = () => {
       </section>
 
       <div className={styles.open}>
-        <h1>Currently open to Junior or Intern Software Dev/Engineering roles.</h1>
+        <h1>Currently open to Junior Frontend / Software Engineering roles.</h1>
 
         <div>
           <p>
-            Check out
-            <Link href="https://drive.google.com/file/d/1khtd4EDODO77k3G0WUig3AoedHEmS_fA/view?usp=sharing"> my resume/cv</Link> and <br />
-            <Link href="/projects">my projects</Link>
+            Check out{" "}
+            <Link href="https://drive.google.com/file/d/1khtd4EDODO77k3G0WUig3AoedHEmS_fA/view?usp=sharing">
+              my resume/cv
+            </Link>{" "}
+            and <Link href="/projects">my projects</Link>
           </p>
         </div>
       </div>

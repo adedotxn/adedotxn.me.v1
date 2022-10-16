@@ -6,21 +6,9 @@ import { ProjectsInterface } from "../../utils/interface";
 import GithubSvg from "../svg/github";
 import LiveSvg from "../svg/live";
 
-const ProjectCard: FC = () => {
+const Card: FC<{ project: ProjectsInterface }> = ({ project }) => {
   return (
-    <>
-      <div className={styles.container}>
-        {Featured.map((project) => {
-          return <Cards key={project.id} project={project} />;
-        })}
-      </div>
-    </>
-  );
-};
-
-const Cards: FC<{ project: ProjectsInterface }> = ({ project }) => {
-  return (
-    <div className={styles.card}>
+    <div key={project.id} className={styles.card}>
       {/* Name */}
       <div className={styles.top}>
         {project.livelink ? (
@@ -36,14 +24,12 @@ const Cards: FC<{ project: ProjectsInterface }> = ({ project }) => {
             </Link>
           </h2>
         )}
-        
-        {!project.status && (
-          <div>
-            <button className={styles.ongoing} disabled>
-              Ongoing
-            </button>
-          </div>
-        )}
+
+        {/* <div>
+          <button className={styles.tag} disabled>
+            {project.tag}
+          </button>
+        </div> */}
       </div>
 
       {/* Project Details */}
@@ -59,39 +45,45 @@ const Cards: FC<{ project: ProjectsInterface }> = ({ project }) => {
       </div>
 
       {/* Project Links */}
-      
 
       {/* Github */}
-      {project.status && (
-        <div className={styles.viewing}>
-          {project?.gitlink?.href && (
-            <div>
-              <Link href={`${project?.gitlink?.href}`}>
-                <a target="blank">
-                  <GithubSvg />
-                  <span>Code</span>
-                </a>
-              </Link>
-            </div>
-          )}
+      <div className={styles.viewing}>
+        {project?.gitlink?.href && (
+          <div>
+            {/* <GithubSvg /> */}
+            <Link href={`${project?.gitlink?.href}`}>
+              <a target="blank">
+                <span>Code</span>
+              </a>
+            </Link>
+          </div>
+        )}
 
-
-          {/* Livesite */}
-          {project?.livelink?.href && (
-            <div>
-              <Link href={`${project?.livelink?.href}`}>
-                <a target="blank">
-                  <LiveSvg />
-                  <span>Live Site</span>
-                </a>
-              </Link>
-            </div>
-          )}
-        </div>
-      )}
-
-     
+        {/* Livesite */}
+        {project?.livelink?.href && (
+          <div>
+            <Link href={`${project?.livelink?.href}`}>
+              <a target="blank">
+                {/* <LiveSvg /> */}
+                <span>Live Site</span>
+              </a>
+            </Link>
+          </div>
+        )}
+      </div>
     </div>
+  );
+};
+
+const ProjectCard: FC = () => {
+  return (
+    <>
+      <div className={styles.container}>
+        {Featured.map((project) => {
+          return <Card key={project.id} project={project} />;
+        })}
+      </div>
+    </>
   );
 };
 

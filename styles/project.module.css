@@ -7,6 +7,7 @@
     /* margin-bottom: 5rem; */
     margin-top: 2rem;
 }
+
 .projects h1 {
     margin: 0;
     text-transform: uppercase;
@@ -19,6 +20,7 @@
     width: fit-content;
     padding-bottom: .3rem;
 }
+
 .cards {
     margin: 0;
     display: grid;
@@ -53,7 +55,7 @@
 
 @media screen and (min-width: 1024px) {
     .content {
-        padding:0rem 0rem;
+        padding: 0rem 0rem;
         margin: 0 auto;
     }
 
@@ -64,9 +66,11 @@
     .cards {
         display: grid;
     }
+
     .more {
-        margin-top:2rem;
+        margin-top: 2rem;
     }
+
     .more__links {
         transition: all .15s linear 0s;
     }
@@ -74,6 +78,6 @@
     .more__links span:hover {
         border-bottom: 1px solid var(--highlight);
         -webkit-transform: translateY(10%);
-                transform: translateY(10%)
+        transform: translateY(10%)
     }
 }

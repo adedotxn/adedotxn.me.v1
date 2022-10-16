@@ -4,6 +4,7 @@
   border-radius: .5rem;
   margin-top: 1rem;
   transition: all .15s linear 0s;
+
 }
 
 .card span {
@@ -57,27 +58,39 @@
   list-style-type: none;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: .5rem;
+  gap: .7rem;
   padding: 0;
-  margin-top: .65rem;
+  margin-top: .8rem;
 }
 
-.stack_container li {
+.stack li {
   font-weight: 400;
-  background-color: rgb(118, 118, 118);
+  font-size: .95rem;
+  /* background-color: rgb(118, 118, 118); */
   border-radius: .2rem;
-  padding: .2rem .3rem;
-
+  padding: .2rem .4rem;
+  border: 1px solid rgb(224, 224, 224);
+  color: rgb(215, 214, 214)
 }
 
-.ongoing {
+/* .top {
+  display: flex;
+  align-items: center;
+} */
+
+.ongoing,
+.tag {
   margin-top: .5rem;
-  background-color: var(--highlight);
-  border:0px solid;
-  padding:.2rem .5rem;
-  font-size: .9rem;;
+  background-color: rgba(0, 128, 0, 0.418);
+  /* color: rgb(8, 208, 8); */
+  border: 0px solid;
+  padding: .2rem .5rem;
+  font-size: .9rem;
   border-radius: .3rem;
-  color:rgb(225, 225, 225);
+  letter-spacing: .1rem;
+  border: 1px solid rgb(224, 224, 224);
+  color: rgb(215, 214, 214)
+    /* color: rgb(225, 225, 225); */
 }
 
 .stack {
@@ -89,36 +102,60 @@
   padding: .5rem 0rem;
 }
 
-.stack p {
-  padding: .5rem .5rem 0 .5rem;
-  font-weight: 600;
-  margin: 0;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  border-bottom: 1px solid gray;
 
-  /* border-right: 1px solid white; */
-
-}
 
 .viewing {
   /* border: 1px solid white; */
   width: -webkit-fit-content;
   width: -moz-fit-content;
-  width: fit-content;
+  width: 100%;
   display: flex;
+  justify-content: space-between;
   margin-top: .5rem;
+  /* border: 1px solid red; */
 }
+
+.viewing>div {
+  margin-top: .5rem;
+  background-color: rgb(86, 86, 86);
+  padding: .5rem 2rem;
+  border-radius: .3rem;
+  transition: border-radius 300ms,
+    -webkit-transform 500ms;
+  transition: transform 500ms,
+    border-radius 300ms;
+  transition: transform 500ms,
+    border-radius 300ms,
+    -webkit-transform 500ms;
+
+  transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  /* color: white; */
+}
+
+
+
+.viewing>div:hover,
+.viewing>div :active {
+  border-bottom: 0px solid;
+  -webkit-transform: scale(.90);
+  transform: scale(.90);
+  /* border-radius: .6rem; */
+}
+
 
 .viewing a {
   display: flex;
   align-items: center;
+  justify-content: center;
+  /* border: 1px solid red; */
 }
 
 .viewing span {
   white-space: nowrap;
-  padding-left: .5rem;
+  /* padding-left: .5rem; */
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: rgb(207, 204, 204);
 }
 
 .viewing>div:nth-child(2) {

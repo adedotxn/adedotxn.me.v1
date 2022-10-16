@@ -2,7 +2,7 @@ import { ProjectsInterface, ProjectsWithoutStack } from "./interface";
 
 export const Featured: Array<ProjectsInterface> = [
   {
-    status: true,
+    tag: "Active",
     category: "Personal Project",
     name: "Savelink 📌",
     details:
@@ -13,7 +13,7 @@ export const Featured: Array<ProjectsInterface> = [
     stack: ["TypeScript", "Next.js", "MongoDB"],
   },
   {
-    status: true,
+    tag: "Ongoing",
     category: "Personal Project",
     name: "tagBookmarks 🏷",
     details:
@@ -23,9 +23,9 @@ export const Featured: Array<ProjectsInterface> = [
     stack: ["TypeScript", "Next.js", "Mantine UI", "MongoDB", "Redux"],
   },
   {
-    status: true,
+    tag: "Active",
     category: "Blockgames Collaboration",
-    name: "Metafiles",
+    name: "Metafiles 🗃",
     details:
       "A decentralized application for social file sharing and file storage on the blockchain. Worked on this project with a team at a blockchain training program for developers",
     id: 3,
@@ -34,7 +34,7 @@ export const Featured: Array<ProjectsInterface> = [
     stack: ["React.js", "Solidity", "Ipfs", "Chakra UI"],
   },
   {
-    status: true,
+    tag: "Active",
     category: "FrontendMentor Challenge",
     name: "rest-countries",
     details:
@@ -48,7 +48,7 @@ export const Featured: Array<ProjectsInterface> = [
 
 export const ArchiveProjects: Array<ProjectsWithoutStack> = [
   {
-    status: true,
+    tag: "Ongoing",
     name: "data-structures-and-algorithms",
     details:
       "my notes on data structures and algorithms from freecodecamp and other sources",
@@ -58,7 +58,7 @@ export const ArchiveProjects: Array<ProjectsWithoutStack> = [
     ),
   },
   {
-    status: true,
+    tag: "Active",
     name: "rest-countries",
     details:
       "web app to get information about countries, data fetched from rest apis, built with react",
@@ -67,7 +67,7 @@ export const ArchiveProjects: Array<ProjectsWithoutStack> = [
     livelink: new URL("https://rest-countries-web-appp.vercel.app/"),
   },
   {
-    status: true,
+    tag: "Active",
     name: "space-tourism website",
     details: "a multipage website for an hypothetical space tourism company",
     id: 3,
@@ -75,7 +75,7 @@ export const ArchiveProjects: Array<ProjectsWithoutStack> = [
     livelink: new URL("http://space-tourism-phyf3.vercel.app/"),
   },
   {
-    status: true,
+    tag: "Active",
     name: "rock-paper-scissors game",
     details: "",
     id: 4,
