@@ -50,7 +50,7 @@ const Navlist = () => {
               passHref
             >
               <a target="blank">
-                <span>Resume</span>
+                <span className={styles.resumee}>Resume</span>
               </a>
             </Link>
           </button>

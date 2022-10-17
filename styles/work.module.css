@@ -24,7 +24,7 @@
 }
 
 .stack ul li {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     color: rgb(224, 224, 224);
     ;
 }
@@ -65,5 +65,9 @@
 
     .stack ul {
         grid-template-columns: repeat(4, 1fr);
+    }
+
+    .stack ul li {
+        font-size: 1.05rem;
     }
 }

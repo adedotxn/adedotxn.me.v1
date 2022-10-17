@@ -7,12 +7,12 @@ import ContactIcons from "../contact_icons";
 import Navlist from "./nav_list";
 
 const Navbar = () => {
-  const {dropdown, setDropdown} = useDropdown()
+  const { dropdown, setDropdown } = useDropdown();
   const { events } = useRouter();
 
   const closeDropdown = useCallback(() => {
     setDropdown(false);
-  },[setDropdown]);
+  }, [setDropdown]);
 
   useEffect(() => {
     events.on("routeChangeComplete", closeDropdown);
@@ -20,17 +20,21 @@ const Navbar = () => {
     return () => {
       events.off("routeChangeComplete", closeDropdown);
     };
-  }, [events,closeDropdown]);
+  }, [events, closeDropdown]);
 
   return (
     <>
-      <header className={dropdown ?styles.dropdown_header :styles.header}>
+      <header className={dropdown ? styles.dropdown_header : styles.header}>
         <h1>
           <Link href="/"> adedotxn.</Link>
         </h1>
 
         <div className={styles.burger} onClick={() => setDropdown(!dropdown)}>
-          <div className={dropdown ? "burger burger-squeeze open": "burger burger-squeeze"} >
+          <div
+            className={
+              dropdown ? "burger burger-squeeze open" : "burger burger-squeeze"
+            }
+          >
             <div className="burger-lines"></div>
           </div>
         </div>
@@ -44,7 +48,7 @@ const Navbar = () => {
         <div className={styles.dropdown}>
           <Navlist />
           <div className={styles.contacts}>
-            <ContactIcons/>
+            <ContactIcons />
           </div>
         </div>
       )}

@@ -1,5 +1,5 @@
 .card {
-  background-color: rgb(33, 31, 31);
+  background-color: var(--bg-accent);
   padding: 1rem 1rem;
   border-radius: .5rem;
   margin-top: 1rem;
@@ -21,7 +21,7 @@
 
 .card p {
   margin: 0;
-  font-size: 1.05rem;
+  font-size: 1rem;
   line-height: 1.5rem;
 }
 
@@ -177,6 +177,10 @@
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
+  }
+
+  .card p {
+    font-size: .95rem;
   }
 
   .card>div>a {

@@ -5,7 +5,7 @@
   border: none;
   padding: .8rem 1rem;
   margin: 0;
-  font-family: 'League Spartan', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 1.1rem;
   font-weight: 500;
   position: relative;
@@ -80,6 +80,11 @@
   .button__mimas span {
     position: relative;
     mix-blend-mode: difference;
+  }
+
+  .resumee {
+    font-family: "Space Grotesk", sans-serif;
+
   }
 
   .button__mimas::before {

@@ -6,39 +6,49 @@
 
 }
 
-.header h1, .dropdown_header h1 {
-    font-weight: 500;
+.header h1,
+.dropdown_header h1 {
+    color: rgb(224, 224, 224);
+    font-size: 1.9rem;
+    font-weight: 700;
+    font-stretch: condensed;
 }
 
 .navlist {
     display: none;
 }
+
 .dropdown_header {
-    background-color: black;
+    background-color: var(--bg);
     position: fixed;
-    top:0rem;
-    width:100vw;
+    top: 0rem;
+    width: 100vw;
     display: flex;
     align-items: center;
     padding: .5rem 2rem;
     justify-content: space-between;
     overflow: hidden;
+    -ms-scroll-chaining: none;
     overscroll-behavior: contain;
     z-index: 4;
 
 }
+
+
+
 .dropdown {
     position: fixed;
     z-index: 3;
-    top:4rem;
+    top: 4rem;
     background-color: var(--bg);
-    width:100vw;
-    height:90vh;
+    width: 100vw;
+    height: 90vh;
     /* border: 1px solid red; */
     transition: all .2s linear 0s;
     padding: 0;
     margin: 0;
     /* overflow-y: hidden; */
+    -ms-scroll-chaining: none;
     overscroll-behavior: contain;
 }
 
@@ -47,8 +57,9 @@
     display: grid;
     place-items: center;
     padding: 0;
-    margin: 3vh 0 0 0 ;
+    margin: 3vh 0 0 0;
 }
+
 .dropdown>ul>li {
     font-size: 2.2rem;
     margin-top: 3rem;
@@ -58,15 +69,18 @@
     width: fit-content;
     letter-spacing: .2rem;
 }
+
 .dropdown>ul>li:nth-child(4) {
     font-size: 1.2rem;
     border-bottom: 1px solid grey;
 
 }
+
 .dropdown>ul>li:nth-child(5) {
     margin-top: 1.5rem;
     border-bottom: 1px solid grey;
 }
+
 .dropdown>ul>li button {
     border: 0px solid;
     background-color: transparent;
@@ -75,20 +89,23 @@
     padding: 0;
     text-transform: uppercase;
 }
+
 .contacts {
     display: grid;
     place-items: center;
     align-items: center;
     margin-top: 3rem;
 }
+
 .contacts ul {
     list-style-type: none;
     display: flex;
     justify-content: space-between;
     padding: 0;
-    margin: 0 0 0 0 ;
-    
+    margin: 0 0 0 0;
+
 }
+
 .contacts ul li {
     padding: 0rem 1rem;
     /* border:1px solid white; */
@@ -97,7 +114,7 @@
 
 .burger {
     -webkit-transform: scale(.8);
-            transform: scale(.8);
+    transform: scale(.8);
 }
 
 @media screen and (min-width: 1024px) {
