@@ -35,7 +35,9 @@ const Work = () => {
       </section>
 
       <div className={styles.open}>
-        <h1>Currently open to Junior Frontend / Software Engineering roles.</h1>
+        <h1>
+          Currently open to Junior (Frontend / Software) Engineering roles.
+        </h1>
 
         <div>
           <p>

@@ -31,10 +31,6 @@ const Home: NextPage = () => {
           </div>
         </div>
       </main>
-
-      {/* <footer >
-        <p>Inspired by <span><Link href="https://brittanychiang.com">brittanychiang.com</Link></span>  </p>
-      </footer> */}
     </div>
   );
 };

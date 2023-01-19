@@ -29,7 +29,7 @@
 
 .more {
     margin-top: 1rem;
-    border-top: 1px solid var(--lightbg);
+    border-top: 1px solid white;
     border-bottom: 1px solid var(--lightbg);
     padding-bottom: 2rem;
 }
