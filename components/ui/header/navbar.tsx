@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useCallback, useEffect, useState } from "react";
-import styles from "../../styles/navbar.module.css";
-import { useDropdown } from "../../utils/context";
-import ContactIcons from "../contact_icons";
-import Navlist from "./nav_list";
+import styles from "./navbar.module.css";
+import { useDropdown } from "../../../utils/context";
+import ContactIcons from "../contactIcons";
+import Navlist from "./navlist";
 
 const Navbar = () => {
   const { dropdown, setDropdown } = useDropdown();

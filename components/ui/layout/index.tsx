@@ -1,6 +1,7 @@
+import Navbar from "@components/ui/header/navbar";
 import Head from "next/head";
 import { ReactNode, useState } from "react";
-import Navbar from "../header/navbar";
+
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (

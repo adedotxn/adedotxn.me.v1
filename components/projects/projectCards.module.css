@@ -35,6 +35,7 @@
   background-color: var(--darkbrown);
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
+  border: 1px solid grey;
 }
 
 
@@ -50,18 +51,23 @@
   position: relative
 }
 
-.stack_container {
+.stack {
   width: 6rem;
-}
-
-.stack_container ul {
   list-style-type: none;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: .7rem;
   padding: 0;
   margin-top: .8rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  white-space: nowrap;
+  /* padding: .5rem 0rem; */
 }
+
+
+
 
 .stack li {
   font-weight: 400;
@@ -93,18 +99,9 @@
     /* color: rgb(225, 225, 225); */
 }
 
-.stack {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  white-space: nowrap;
-  margin: 0;
-  padding: .5rem 0rem;
-}
 
 
-
-.viewing {
+.links {
   /* border: 1px solid white; */
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -115,7 +112,7 @@
   /* border: 1px solid red; */
 }
 
-.viewing>div {
+.links>div {
   margin-top: .5rem;
   background-color: rgb(86, 86, 86);
   padding: .5rem 2rem;
@@ -134,8 +131,8 @@
 
 
 
-.viewing>div:hover,
-.viewing>div :active {
+.links>div:hover,
+.links>div :active {
   border-bottom: 0px solid;
   -webkit-transform: scale(.90);
   transform: scale(.90);
@@ -143,14 +140,14 @@
 }
 
 
-.viewing a {
+.links a {
   display: flex;
   align-items: center;
   justify-content: center;
   /* border: 1px solid red; */
 }
 
-.viewing span {
+.links span {
   white-space: nowrap;
   /* padding-left: .5rem; */
   font-weight: 500;
@@ -158,7 +155,7 @@
   color: rgb(207, 204, 204);
 }
 
-.viewing>div:nth-child(2) {
+.links>div:nth-child(2) {
   margin-left: 1rem;
 }
 

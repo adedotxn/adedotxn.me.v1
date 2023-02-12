@@ -1,13 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
 import { LazyMotion, m } from "framer-motion";
 import Link from "next/link";
-import styles from "../styles/Home.module.css";
-import { useDropdown } from "../utils/context";
-import { introContainer, introItems } from "./animation/animation";
-import ContactIcons from "./contact_icons";
+import styles from "./home.module.css";
+import { useDropdown } from "../../utils/context";
+import { introContainer, introItems } from "../ui/animation";
+import ContactIcons from "../ui/contactIcons";
 
 const loadFeatures = () =>
-  import("../utils/features.js").then((res) => res.default);
+  import("@utils/features.js").then((res) => res.default);
 
 const Intro = () => {
   const { setDropdown } = useDropdown();

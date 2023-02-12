@@ -1,7 +1,8 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
-import Layout from '../components/layout/layout'
-import { UtilityProvider } from '../utils/context'
+import "../styles/globals.css";
+import type { AppProps } from "next/app";
+import Layout from "@components/ui/layout";
+import { UtilityProvider } from "@utils/context";
+
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <UtilityProvider>
@@ -9,7 +10,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
       </Layout>
     </UtilityProvider>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;

@@ -1,15 +1,15 @@
-import Image from "next/image";
 import { FC } from "react";
-import styles from "../../styles/archive_cards.module.css";
-import { ArchiveProjects } from "../../utils/data";
+import styles from "./archiveCards.module.css";
 import Link from "next/link";
 import { LazyMotion, m } from "framer-motion";
-import { ProjectsWithoutStack } from "../../utils/interface";
-import LiveSvg from "../svg/live";
-import GithubSvg from "../svg/github";
-import { projectContainer } from "../animation/animation";
+import LiveSvg from "../ui/svg/live";
+import GithubSvg from "../ui/svg/github";
+import { projectContainer } from "../ui/animation";
+import { ProjectsWithoutStack } from "@utils/interface";
+import { ArchiveProjects } from "@utils/data";
 
-const loadFeatures = () => import("../../utils/features.js").then((res) => res.default);
+const loadFeatures = () =>
+  import("../../utils/features.js").then((res) => res.default);
 
 const ArchiveCard: FC = () => {
   return (
@@ -47,7 +47,7 @@ const Cards: FC<{ project: ProjectsWithoutStack }> = ({ project }) => {
             </h3>
           )}
           <p>{project.details}</p>
-          
+
           {/* Project Links */}
           {/* Github */}
           <div className={styles.viewing}>
