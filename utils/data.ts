@@ -17,7 +17,7 @@ export const Featured: Array<ProjectsInterface> = [
     category: "Personal Project",
     name: "tagBookmarks 🏷",
     details:
-      "A web app for adding tags/labels to your twitter bookmarks and searching & filtering through them all. Currently working on the helper twitter bot",
+      "A web app for adding tags/labels to your twitter bookmarks and searching & filtering through them all. Currently not working because of the recent price put on the twitter api but the code is public ;)",
     id: 2,
     livelink: new URL("https://tagbookmarks.vercel.app"),
     stack: ["TypeScript", "Next.js", "Mantine UI", "MongoDB", "Redux"],
@@ -78,14 +78,7 @@ export const ArchiveProjects: Array<ProjectsWithoutStack> = [
     gitlink: new URL("https://github.com/adedotxn/REST-Countries-web-app"),
     livelink: new URL("https://rest-countries-web-appp.vercel.app/"),
   },
-  {
-    tag: "Active",
-    name: "space-tourism website",
-    details: "a multipage website for an hypothetical space tourism company",
-    id: 3,
-    gitlink: new URL("https://github.com/adedotxn/space-tourism"),
-    livelink: new URL("http://space-tourism-phyf3.vercel.app/"),
-  },
+
   {
     tag: "Active",
     name: "rock-paper-scissors game",

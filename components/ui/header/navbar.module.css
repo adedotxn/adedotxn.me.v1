@@ -1,159 +1,54 @@
 .header {
     display: flex;
-    justify-content: space-between;
-    padding: .5rem 2rem;
-    align-items: center;
-
-}
-
-.header h1,
-.dropdown_header h1 {
-    color: rgb(224, 224, 224);
-    font-size: 1.9rem;
-    font-weight: 700;
-    font-stretch: condensed;
+    padding: .5rem 1rem;
 }
 
 .navlist {
-    display: none;
-}
-
-.dropdown_header {
-    background-color: var(--bg);
-    position: fixed;
-    top: 0rem;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    padding: .5rem 2rem;
-    justify-content: space-between;
-    overflow: hidden;
-    -ms-scroll-chaining: none;
-    overscroll-behavior: contain;
-    z-index: 4;
-
-}
-
-
-
-.dropdown {
-    position: fixed;
-    z-index: 3;
-    top: 4rem;
-    background-color: var(--bg);
-    width: 100vw;
-    height: 90vh;
-    /* border: 1px solid red; */
-    transition: all .2s linear 0s;
-    padding: 0;
-    margin: 0;
-    /* overflow-y: hidden; */
-    -ms-scroll-chaining: none;
-    overscroll-behavior: contain;
-}
-
-.dropdown>ul {
-    list-style-type: none;
     display: grid;
     place-items: center;
-    padding: 0;
-    margin: 3vh 0 0 0;
+    width: 94vw;
 }
 
-.dropdown>ul>li {
-    font-size: 2.2rem;
-    margin-top: 3rem;
-    text-transform: uppercase;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    letter-spacing: .2rem;
-}
-
-.dropdown>ul>li:nth-child(4) {
-    font-size: 1.2rem;
-    border-bottom: 1px solid grey;
-
-}
-
-.dropdown>ul>li:nth-child(5) {
-    margin-top: 1.5rem;
-    border-bottom: 1px solid grey;
-}
-
-.dropdown>ul>li button {
-    border: 0px solid;
-    background-color: transparent;
-    color: var(--white);
-    font-size: 1.2rem;
-    padding: 0;
-    text-transform: uppercase;
-}
-
-.contacts {
-    display: grid;
-    place-items: center;
-    align-items: center;
-    margin-top: 3rem;
-}
-
-.contacts ul {
-    list-style-type: none;
+.navlist ul {
     display: flex;
+    align-items: center;
+    list-style-type: none;
     justify-content: space-between;
-    padding: 0;
-    margin: 0 0 0 0;
-
+    background-color: var(--bg-accent);
+    border: 1px solid grey;
+    margin: 1rem auto 0rem auto;
+    border-radius: 1.5rem;
+    width: 94vw;
+    padding: .5rem 1rem;
 }
 
-.contacts ul li {
-    padding: 0rem 1rem;
-    /* border:1px solid white; */
-    margin: 0;
+.navlist ul li {
+    font-size: 1.1rem;
+    font-weight: 600;
 }
 
-.burger {
-    -webkit-transform: scale(.8);
-    transform: scale(.8);
+
+.activeLink {
+    border-bottom: 2px solid var(--highlight);
 }
 
 @media screen and (min-width: 1024px) {
-    .burger {
-        display: none;
-    }
 
-    .header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0rem 2rem;
-    }
 
     .navlist {
-        display: block;
+        width: 100vw;
     }
 
-    .header ul {
-        list-style-type: none;
-        display: flex;
-        align-items: center;
+    .navlist ul {
+        padding: .5rem 2rem;
+        width: 40vw;
     }
 
-    .header ul li {
-        margin-right: 1.3rem;
-        font-size: 1.2rem;
+    .navlist ul li {
+        font-size: 1.1rem;
     }
 
-    .header ul li:last-child {
-        border: 1px solid #c1c1c1ab;
-    }
-
-    .header ul li:last-child:hover {
-        border: 0px solid #c1c1c1ab;
-    }
-
-    .header ul li a span {
-        font-family: 'Fira Code';
-        color: white
+    .header ul li:nth-child(3) {
+        margin-right: 2rem;
     }
 }

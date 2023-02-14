@@ -1,57 +1,45 @@
-import Link from "next/link";
 import { useRouter } from "next/router";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect } from "react";
 import styles from "./navbar.module.css";
 import { useDropdown } from "../../../utils/context";
 import ContactIcons from "../contactIcons";
 import Navlist from "./navlist";
+import RocketFilledIcon from "../svg/rocketFilled";
+import RocketIcon from "../svg/rocket";
+import Link from "next/link";
 
 const Navbar = () => {
   const { dropdown, setDropdown } = useDropdown();
-  const { events } = useRouter();
+  const { events, pathname } = useRouter();
 
   const closeDropdown = useCallback(() => {
     setDropdown(false);
   }, [setDropdown]);
 
-  useEffect(() => {
-    events.on("routeChangeComplete", closeDropdown);
+  // useEffect(() => {
+  //   events.on("routeChangeComplete", closeDropdown);
 
-    return () => {
-      events.off("routeChangeComplete", closeDropdown);
-    };
-  }, [events, closeDropdown]);
+  //   return () => {
+  //     events.off("routeChangeComplete", closeDropdown);
+  //   };
+  // }, [events, closeDropdown]);
 
   return (
     <>
-      <header className={dropdown ? styles.dropdown_header : styles.header}>
-        <h1>
-          <Link href="/"> adedotxn.</Link>
-        </h1>
-
-        <div className={styles.burger} onClick={() => setDropdown(!dropdown)}>
-          <div
-            className={
-              dropdown ? "burger burger-squeeze open" : "burger burger-squeeze"
-            }
-          >
-            <div className="burger-lines"></div>
-          </div>
-        </div>
-
+      <header className={styles.header}>
         <div className={styles.navlist}>
           <Navlist />
         </div>
       </header>
 
-      {dropdown && (
+      {/* {dropdown ? (
         <div className={styles.dropdown}>
           <Navlist />
           <div className={styles.contacts}>
             <ContactIcons />
           </div>
         </div>
-      )}
+      ) : null} */}
     </>
   );
 };

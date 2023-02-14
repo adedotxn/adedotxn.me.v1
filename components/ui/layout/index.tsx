@@ -1,13 +1,12 @@
 import Navbar from "@components/ui/header/navbar";
 import Head from "next/head";
-import { ReactNode, useState } from "react";
-
+import { ReactNode } from "react";
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
     <main>
       <Head>
-        <title>Philip Adewole | Software Developer </title>
+        <title>Philip Adewole | Software Developer| Frontend Engineer </title>
         <meta
           name="description"
           content="Philip's Portfolio | Software Developer"

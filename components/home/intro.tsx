@@ -5,12 +5,16 @@ import styles from "./home.module.css";
 import { useDropdown } from "../../utils/context";
 import { introContainer, introItems } from "../ui/animation";
 import ContactIcons from "../ui/contactIcons";
+import RocketFilledIcon from "@components/ui/svg/rocketFilled";
+import RocketIcon from "@components/ui/svg/rocket";
+import { useRouter } from "next/router";
 
 const loadFeatures = () =>
   import("@utils/features.js").then((res) => res.default);
 
 const Intro = () => {
-  const { setDropdown } = useDropdown();
+  const { dropdown, setDropdown } = useDropdown();
+  const { events, pathname } = useRouter();
   return (
     <LazyMotion features={loadFeatures}>
       <m.section
@@ -19,18 +23,19 @@ const Intro = () => {
         initial="hidden"
         animate="show"
       >
-        <m.h1 variants={introItems}>Philip Adewole.</m.h1>
+        <m.h1 variants={introItems}>Philip Adewole</m.h1>
 
         <m.p variants={introItems} className={styles.intro}>
-          I am a <span>Software Developer</span> with a primary focus on
-          <span> Frontend Engineering</span> with the web technology. I mostly
-          build and am interested in <span>building cool tools</span> and{" "}
-          <span> solutions</span> that solve problems and/or make things easier.
-          Exploring MERNstack at the moment.
+          Hey 👋🏾, I'm Philip, <span>Software Developer</span> with a primary
+          focus on
+          <span> Frontend Engineering</span> on the web for now. I mostly build
+          and am interested in <span>building cool tools</span> and{" "}
+          <span> solutions</span>. I find the embedded systems and the iOT space
+          really cool as well and I enjoy music :)
         </m.p>
 
         <m.p variants={introItems} className={styles.spotify}>
-          If you love music like i do, you can check out what i{" "}
+          You can check out what i{" "}
           <Link href="https://open.spotify.com/user/31amv6xwz5o2euessv3leo3gxog4?si=64862c7a800f4a53">
             listen to on spotify
           </Link>
@@ -40,16 +45,23 @@ const Intro = () => {
           <ContactIcons />
         </m.div>
 
-        <div className={styles.content__item}>
+        {/* <div className={styles.content__item}>
           <m.button
-            onClick={() => setDropdown(true)}
+            onClick={() => setDropdown(!dropdown)}
             variants={introItems}
-            className={[styles.button, styles.button__bestia].join(" ")}
+            className={styles.button}
           >
-            <div className={styles.button__bg}></div>
-            <span>Explore</span>
+            <span>
+              Explore
+              <span
+                onClick={() => setDropdown(!dropdown)}
+                className={dropdown ? styles.skew : styles.unskew}
+              >
+                {dropdown ? <RocketFilledIcon /> : <RocketIcon />}
+              </span>
+            </span>
           </m.button>
-        </div>
+        </div> */}
       </m.section>
     </LazyMotion>
   );
