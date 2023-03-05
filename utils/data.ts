@@ -36,7 +36,7 @@ export const Featured: Array<ProjectsInterface> = [
     id: 3,
 
     livelink: new URL("https://movlibrary.vercel.app"),
-    gitlink: new URL("https://github.com/adedotxn/movlibrary")
+    gitlink: new URL("https://github.com/adedotxn/movlibrary"),
 
     stack: ["TypeScript", "Next.js"],
 
